@@ -1,0 +1,56 @@
+-#0:\ ;デスクトップ shell:Desktop
+-#1:\ ; -shell:InternetFolder
+-#2:\ ; -shell:Programs
+-#3:\ ;コントロールパネル shell:ControlPanelFolder
+-#4:\ ;プリンタ shell:PrintersFolder
+-#6:\ ; -shell:Favorites
+-#7:\ ; -shell:Startup
+-#8:\ ; -shell:Recent
+-#9:\ ; -shell:SendTo
+-#10:\ ;ごみ箱 -shell:RecycleBinFolder
+-#11:\ ;スタートメニュー -shell:Start Menu
+-#13:\ ;マイミュージック -shell:My Music\
+-#14:\ ;マイビデオ -shell:My Video\
+-#16:\ ; -shell:( C:
+-#17:\ ;PC/マイ コンピュータ -shell:MyComputerFolder
+-#18:\ ;ネットワーク コンピュータ shell:NetworkFolder
+-#19:\ ; -shell:NetHood
+-#20:\ ; -shell:Fonts
+-#21:\ ; -shell:Templates
+-#22:\ ; -shell:Common Start Menu
+-#23:\ ; -shell:Common Programs
+-#24:\ ; -shell:Common Startup
+-#25:\ ; -shell:Common Desktop
+-#27:\ ; -shell:Printhood
+-#28:\ ; -shell:Local Appdata
+-#29:\ ; -shell:(ALTSTARTUP)
+-#30:\ ; -shell:(COMMON_ALTSTARTUP)
+-#31:\ ; -shell:Common Favorites(XP)
+-#32:\ ; -shell:Cache
+-#33:\ ; -shell:Cookies
+-#34:\ ; -shell:History
+-#35:\ ; -shell:Common AppData
+-#36:\ ; -shell:Windows
+-#37:\ ; -shell:System
+-#38:\ ; -shell:ProgramFiles
+-#39:\ ;ピクチャ -shell:My Pictures\
+-#40:\ ; -shell:Profile
+-#41:\ ; -shell:SystemX86
+-#42:\ ; -shell:ProgramFilesX86
+-#43:\ ; -shell:ProgramFilesCommon
+-#44:\ ; -shell:ProgramFilesCommonX86
+-#45:\ ; -shell:Common Templates
+-#46:\ ; -shell:Common Documents
+-#47:\ ; -shell:Common Administrative Tools
+-#48:\ ; -shell:Administrative Tools
+-#49:\ ; -shell:ConnectionsFolder
+-#53:\ ; -shell:CommonMusic
+-#54:\ ; -shell:CommonPictures
+-#55:\ ; -shell:CommonVideo
+-#56:\ ; -shell:(Resources)
+-#57:\ ; -shell:(Localized Resources)
+-#58:\ ; -shell:(Common oem links)
+-#59:\ ; -shell:CD Burning
+-#61:\ ; -shell:(ComputersNearMe)
+%USERPROFILE%\Downloads ;ダウンロード
+shell:::{ED7BA470-8E54-465E-825C-99712043E01C};ALLTASKS

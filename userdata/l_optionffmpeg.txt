@@ -1,0 +1,47 @@
+ffmpeg
+	-ab <bitrate> ;音声のビットレート (bits/s 単位)。192k のような指定も可能。
+	-ac <channels> ;音声のチャンネル数を指定。
+	-acodec <codec> ;音声コーデックを指定 ("copy" でストリームの直接コピー")
+	-an ;音声無しで出力。
+	-aq <quality> ;品質ベースの音声エンコード指定 (値はコーデックによる)
+	-ar (サンプリングレートHz) -ab (ビットレートkbps) ;音声変換 ex:ffmpeg -i in.mp4 -ar 44100 -ab 160k out.mp3
+	-aspect <aspect> ;出力ファイルの画面アスペクト比を指定。
+	-author <string> ;出力ファイルに作成者情報を設定
+	-b (ビットレート(bits/s)) ;ビットレート指定 ex:ffmpeg -i in.mp4 -b 1200K out.mp4
+	-codecs ;利用可能なコーデックを表示
+	-comment <string> ;出力ファイルにコメントを設定
+	-copyright <string> ;出力ファイルに著作権情報を設定
+	-dframes <number> ;"number" で指定されたフレーム数のみ変換
+	-f <fmt> ;強制的に "fmt" で指定したフォーマットで出力
+	-f concat -safe 0 -i filelist.txt ;動画を接続する filelist.txtは、file 'C:\\videos\\movie01.mp4'のように1行1ファイル列挙
+	-filter_complex ""[0:0]pad=2*iw[a];[a][1:0]overlay=w"" ;横につなげる ex:ffmpeg -i input1.mp4 -i input2.mp4 -filter_complex ""[0:0]pad=2*iw[a];[a][1:0]overlay=w"" out.mp4
+	-formats ;利用可能なフォーマットを表示
+	-fs <limit_size> ;出力ファイルのサイズを "limit_size" バイトに制限
+	-i <filename> ;入力ファイルのパス (複数指定可)
+	-newaudio ;出力ファイルに新しい音声ストリームを追加する。
+	-r (FPS) ;フレームレート	ex:ffmpeg -i base_file.mp4 -r 10 output.gif
+	-s <size> ;指定した "size" にリサイズする。 ?数字指定 	-s 640x480, -s 320x240 等
+	-ss 開始時間(秒) -i (入力ファイル) -t トリミング長(秒) ;動画の一部分を切り抜く（指定時間でトリミング） ex:ffmpeg -ss 10 -i in.mp4 -t 5 out.mp4
+	-t <duration> ;入力ファイルのうち "duration" 秒だけを変換
+	-threads <int> ;エンコードスレッド数。デュアルコア以上の CPU の場合には2など
+	-timestamp <time> ;出力ファイルにタイムスタンプを設定
+	-title <string> ;出力ファイルにタイトルを設定
+	-v <verbose> ;詳細なログ出力を有効にする  
+	-vcodec copy -an ;映像そのまま音声無し ex:ffmpeg -i in.mp4 -vcodec copy -an out.mp4
+	-vf crop=(横幅):(高さ):(矩形左上x座標):(矩形左上y座標) ;矩形切抜(px) ex:ffmpeg -i in.mp4 -vf crop=320:160:0:0 -y out.mp4
+	-vf eq=brightness=(明るさ) ;明るさを調整 ex:ffmpeg -i in.mp4 -vf eq=brightness=0.1 out.mp4
+	-vf eq=contrast=(コントラスト) ;コントラストを調整 ex:ffmpeg -i in.mp4 -vf eq=contrast=1.5 out.mp4
+	-vf eq=gamma=(ガンマ値) ;ガンマ値調整 ex:ffmpeg -i in.mp4 -vf eq=gamma=2  out.mp4
+	-vf eq=saturation=(サチュレーション) ;サチュレーションを調整 ex:ffmpeg -i in.mp4 -vf eq=saturation=1.5 out.mp4
+	-vf eq=saturation=(輝度) ;明るさ（輝度）を調整 ex:ffmpeg -i in.mp4 -vf eq=brightness=0.1 out.mp4
+	-vf scale=min((横幅)\,iw):trunc(ow/a/2)*2 ;横幅指定してリサイズ ex:ffmpeg -i in.mp4 -vf scale=min(320\,iw):trunc(ow/a/2)*2 out.mp4
+	-vf setpts=PTS/(倍速) -r (FPS) ;タイムラプス ex:ffmpeg -i in.mp4 -filter:v "-vf setpts=PTS/20" -pix_fmt yuvj420p -r 15 out.mp4
+	-vol <volume> ;音声のボリュームを変更する。(未指定 or 256 でそのまま)。
+	-y ;出力時に既存の同名ファイルを警告無しに上書き
+;一行編集の入力内容全消去後、templateと入力することでテンプレートを補完候補として列挙
+;<template1>;ffmpeg -i "%C" -b:v 250k  -s 960x540 -an -threads 0 "%X_1.wmv"
+;<template2>;ffmpeg -i "%C" -b:v 500k -an -threads 0 "%X_1.wmv"
+;<template3>;ffmpeg -i "%C" -b:v 250k -s 320x240 -an -threads 0 "%X_1.wmv"
+;<template4>;ffmpeg -i "%C" -ss 80 -t 120 -b:v 500k  -s 320x240 -an -threads 0 "%X_1.mp4"
+;<template5>;ffmpeg -i "%C" -b:v 250k  -s 640x480 -vf eq=brightness=0.2 -an -threads 0 "%X_1.mp4"
+;<template6>;ffmpeg -i "%C" -vf "setpts=10.0*PTS" "%X.mp4"

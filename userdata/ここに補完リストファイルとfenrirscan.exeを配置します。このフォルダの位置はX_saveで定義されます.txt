@@ -1,0 +1,19 @@
+X_saveを%0backupから%0userdata または %APPDATA%TOROID\PPxに変更
+リストファイルl_exexxx.txt、l_dirxxx.txtを%0からX_saveで指定したディレクトリに変更。
+
+-----------------------------------------------------------------------------------
+
+X_saveで指定された場所にこのフォルダにあるファイルと同じ名前のファイルが作成される。
+
+通常はX_save=%0userdataとなる。
+
+但しPPxをProgram Files以下にインストールしたときはX_save=%APPDATA%TOROID\PPxとなる。
+
+fenrirscan.exeとfenrirscan.ini、scanrule.iniもX_saveで指定されるフォルダに配置
+
+どこにインストールしているかFIRSTEVENTで判定。
+
+KC_main = {
+FIRSTEVENT	,*customize X_save=userdata
+	*ifmatch /Program Files/,%0 %:*customize X_save=%'APPDATA'\TOROID\PPx
+}

@@ -1,0 +1,21 @@
+* ;任意の文字列
+? ;１文字
+! ;否定 例).txt,!/read/ (1) .txt はすべて該当し、(2) read を含まないエントリが該当します
+& ;AND指定(論理積) 例) &.txt,&*memo* .txt 且つ *memo* を満たすエントリが該当します。
+&a: ;属性(rshda)例) &a:r+ 読み込み専用に限定
+&d:<3 ;3日以内
+&d:>=2008-1-1 ;指定日以降
+&s:<=1M ;1Mbytes以内
+/ ;正規表現/ 例) /\d+/
+option:x ; 拡張子を分離しないで判別します。
+option:d ;「path:」と同じく、wildcardでファイル名に加えてディレクトリ名の判別を行うようになります。
+option:w ;部分一致、単語扱い（空白区切り）の動作に変更します。
+.exe;.com;.bat;.cmd;.lnk ;実行形式
+.bmp;.jpg;.jpeg;.gif;.png;.psd;.tif* ;画像形式
+.swf ;Flash
+.mpeg;.mpg;.avi;.mp2;.wmv;.3gp;.mp4;.mov;.qt;.flv ;動画形式
+.wav;.mp3;.aac ;音声形式
+.doc;.docx;.dot;.wri;.rtf;.txt;.sxw;.odt ;文書
+.lzh;.zip;.7z;.cab;.tar;.rar;*.msi ;圧縮形式
+.bmp;.jpg;.jpeg;.jfif;.gif;.png;.psd;.tif* ;画像形式
+.doc;.docx;.xls;.xlsx;.ppt;.pptx;.pdf;OFFICE文書
