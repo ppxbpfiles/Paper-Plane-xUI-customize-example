@@ -3,6 +3,11 @@
 TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 
 ---
+# Screen Shot
+
+![screenshot1](image/PPx_cust_Readme/screenshot1.png)
+
+---
 
 ## このカスタマイズファイルの特長
 
