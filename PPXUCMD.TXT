@@ -1,20 +1,12 @@
-*google; google検索
-*mp3 ; Everything(es.exe)でmp3ファイルを検索
-*openwithie ; *openwithie %C IEで開く
-%M_pjump;; [0] Path Jump
-%M_edit;; 一行編集メニューバー
-%M_editc;; 一行編集コンテキストメニュー
-%M_mask;** マスクメニュー(Ctrl+F) **; ワイルドカード入力補助
-%M_Ccr;**エントリ空欄右クリックメニュー**; PPc ^[Enter] ContextMenuへの追加分
-%M_wsrc;; PPc ^[W] 検索対象入力補助
-%M_tabc;; PPc タブメニュー&[-]
-%M_ppvc;; PPvコンテキスト追加分
 %M_addhistory;** パス補完登録と削除 **
 %M_backupsetting;** 個人設定のバックアップ **
 %M_bin;** バイナリ変換 **
 %M_Ccr.exe;** Ctrl+ENTER.exe **
+%M_Ccr;**エントリ空欄右クリックメニュー**; PPc ^[Enter] ContextMenuへの追加分
 %M_DirMenu;** エントリ表示空欄右クリックメニュー **
 %M_drives;** comment **
+%M_edit;; 一行編集メニューバー
+%M_editc;; 一行編集コンテキストメニュー
 %M_editci;** comment **
 %M_everythingadminexec;** EverythingをUAC ダイアログを出さずに特権実行 **
 %M_exec;** コマンドプロンプト **
@@ -38,6 +30,8 @@
 %M_launchphoto;** 写真編集ソフト **
 %M_launchtext;** ランチャ（テキスト） **
 %M_listfile;** ListFileの作成と閲覧 **
+%M_mask;** マスクメニュー(Ctrl+F) **; ワイルドカード入力補助
+%M_memdirectory;** ID毎に記憶したディレクトリにジャンプ **
 %M_memo;** 一行メモとリマインダー **
 %M_menuCDir;** PPc ディレクトリメニュー **
 %M_menuCEdit;** PPc 編集メニュー **
@@ -78,10 +72,13 @@
 %M_PACKZIP;** 圧縮サブメニュー(ZIP) **
 %M_pathstore;** Pathstore関連 **
 %M_Pdf;** PdfcpuによるPDF編集 **
+%M_pjump;; [0] Path Jump
 %M_ppclistz;** PPc[Zxx]用サブ窓起点リスト **
+%M_ppvc;; PPvコンテキスト追加分
 %M_Rename;** まとめてリネーム **
 %M_search;** 検索 **
 %M_shortcut;** ショートカット作成メニュー **
+%M_tabc;; PPc タブメニュー&[-]
 %M_tabgroup;** タブグループ(要X_combos2項目目B7=1) **
 %M_theme;** 配色設定 **
 %M_timestampcopy;** タイムスタンプ復元・複写 **
@@ -89,5 +86,9 @@
 %M_um01;** ディレクトリジャンプメニュー **
 %M_vmenu;** PPv 最近開いたファイル **
 %M_webclip;** Webクリップ/Webスクラップ **
+%M_wsrc;; PPc ^[W] 検索対象入力補助
 %M_XMPrating;** レーティングをXMP情報に書き込む **
 %M_xpack;** 圧縮関係メニュー(カレント) **
+*google; google検索
+*mp3 ; Everything(es.exe)でmp3ファイルを検索
+*openwithie ; *openwithie %C IEで開く
