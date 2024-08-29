@@ -3,11 +3,6 @@
 TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 
 ---
-# Screen Shot
-
-![screenshot1](image/PPx_cust_Readme/screenshot1.png)
-
----
 
 ## このカスタマイズファイルの特長
 
@@ -134,6 +129,7 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 1. PPxインストールフォルダーがC:\program Files以下（たとえば、C:\Program Files\PPx）の場合
 
    X_save＝%'APPDATA'\TOROID\PPx\userdata
+
 2. PPxインストールフォルダーがC:\program Files以外（ポータブルインストール）の場合
 
    X_save=（PPxインストールフォルダー）\userdata
@@ -217,11 +213,17 @@ Everythingで検索するための一行編集窓が開きます。
 
 **D)Susie Pluginの設定**
 
-PDFのプレビューしたい場合は。ifextend.sphの拡張子にPDFを登録してください。
+PDFのプレビューしたい場合はifextend.sphの拡張子にPDFを登録してください。
 
 axpdf.sphは「使用する」のところをチェック外してください。PPxから直接呼び出さないだけでインストールは必要です。
 
 ![1716632886764](image/PPx_cust_Readme/1716632886764.png)
+
+**E） PPXUMASK.TXT PPXUPATH.TXT PPXUPATH.TXTの配置**
+
+PPWXXXX.DATが存在するフォルダに配置します。このカスタマイズ（PPx_kuro_unicode.cfg）においてはX_saveで指定された
+
+ディレクトリ(～\userdata)の1つ上位のディレクトリに配置することになります。
 
 ---
 
@@ -231,24 +233,23 @@ axpdf.sphは「使用する」のところをチェック外してください�
      直接記述しています。**
 
 ```.js
- FIRSTEVENT	,*setcust X_save=userdata %:*ifmatch /Program Files/,%0 %:*setcust X_save=%'APPDATA'\TOROID\PPx\userdata
-  	         *makedir %*name(DC,%*getcust(X_save)\listfile,"%0") %m"X_saveで指定したディレクトリがなければ作成する。"
-  	         *setsortentry &Z:名前数値順 %m"ソートは名前順で、数字桁が違っても数字の大小を認識する並びがデフォルト"
-  	         *setmaskentry %m"起動時ファイルマスクをリセットする。"
-  	         *ppvoption sync off %m"Shift+Yキーで開く連動ビューPPv[X]はONにして使用したあとOFFにし忘れて変な挙動になったとき連動ビューが原因だと気づきにくい。PPc起動時は必ずOFFにする。"
-  	         *ifmatch !0,0%n# %: *viewstyle 保持設定({と}で調整)
-  	         *ifmatch !0,0%n# %: *ifmatch !0,0%*getcust(S_memdirectory:%n) %:*jumppath %*getcust(S_memdirectory:%n)
-  	         *ifmatch CA,%n %:*ifmatch "option:e,a:d-", %*extract("%'zoxide'") %:*run -noppb -hide -nostartmsg zoxide query -l > "%*name(DCN,%*getcust(X_save),"%0")\l_dirZoxide.txt"
-  	         *ifmatch CW,%n %:*viewstyle コメント
+FIRSTEVENT	,*setcust X_save=userdata %:*ifmatch /Program Files/,%0 %:*setcust X_save=%'APPDATA'\TOROID\PPx\userdata
+	*makedir %*name(DC,%*getcust(X_save)\listfile,"%0") %m"X_saveで指定したディレクトリがなければ作成する。"
+	*setsortentry &Z:名前数値順 %m"ソートは名前順で、数字桁が違っても数字の大小を認識する並びがデフォルト"
+	*setmaskentry %m"起動時ファイルマスクをリセットする。"
+	*ppvoption sync off %m"Shift+Yキーで開く連動ビューPPv[X]はONにして使用したあとOFFにし忘れて変な挙動になったとき連動ビューが原因だと気づきにくい。PPc起動時は必ずOFFにする。"
+	*ifmatch !0,0%n# %: *viewstyle 保持設定({と}で調整)
+	*ifmatch !0,0%n# %: *ifmatch !0,0%*getcust(S_memdirectory:%n) %:*jumppath %*getcust(S_memdirectory:%n)
+	*ifmatch CA,%n %:*ifmatch "option:e,a:d-", %g'zoxide' %:*run -noppb -hide -nostartmsg zoxide query -l > "%*name(DCN,%*getcust(X_save),"%0")\l_dirZoxide.txt"
+	*ifmatch CW,%n %:*viewstyle コメント
 ```
 
-- X_saveディレクトリ（3行目）
-- 起動時エントリの並び（４行目）
-- 起動時ファイルマスクリセット（５行目）
-- PPcからビューアとして使うPPvのID（６行目） X_vposの設定を使うのはPPv[Y]のみ。
-- 起動時連動ビューOFF（7行目）
-- タブ付窓起動時のエントリ表示設定（8行目）
-- タブ付窓起動時の初期表示するエントリ（9行目）
+- X_saveディレクトリ（1行目）
+- 起動時エントリの並び（3行目）
+- 起動時ファイルマスクリセット（4行目）
+- 起動時連動ビューOFF（5行目）
+- タブ付窓起動時のエントリ表示設定（6行目）
+- タブ付窓起動時の初期表示するエントリ（7行目）
 
   ※「.」（このディレクトリ）表示されたエントリ上でENTERを押して
 
