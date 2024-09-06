@@ -80,7 +80,7 @@
 %M_shortcut ;** ショートカット作成メニュー **
 %M_tabc ; ; PPc タブメニュー&[-]
 %M_tabgroup ;** タブグループ(要X_combos2項目目B7=1) **
-%M_theme ;** 配色設定 **
+%M_theme ;** 配色と窓の透明化設定 **
 %M_timestampcopy ;** タイムスタンプ復元・複写 **
 %M_treelist01 ;** comment **
 %M_um01 ;** ディレクトリジャンプメニュー **
@@ -92,7 +92,7 @@
 *google ; google検索
 *mp3 ; Everything(es.exe)でmp3ファイルを検索
 *openwithie ; *openwithie %C IEで開く
-;ここから下はPPxのWindowsヘルプに含まれるppxcmd.txtの内容
+;※ここから下はPPxのWindowsヘルプに含まれるppxcmd.txtの内容
 %!macro ; 部分編集
 %"comment" ; コメント
 %#[type] ; 列挙
