@@ -275,7 +275,6 @@ ACTIVEEVENT	,*setcust X_flst=3,1,0,300 %m"XC_flstのデフォルト値を設定�
 	*ifmatch !CX;!CY,%n %:*string u,temp_exec = %%I"PPc[X]起動後に他のPPcがアクティブになったため、コマンドを無効にしました。"
 	*string i,Edit_OptionCmd=
 	*string i,Edit_OptionTitle=
-	*ppvoption id %m"@Nで使用するppvのID限定を解除"
 ```
 
 - x_flst（1行目）　一行編集の補完リストは1枚がデフォルトで
