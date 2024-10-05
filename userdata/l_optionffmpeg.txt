@@ -39,9 +39,9 @@ ffmpeg
 	-vol <volume> ;音声のボリュームを変更する。(未指定 or 256 でそのまま)。
 	-y ;出力時に既存の同名ファイルを警告無しに上書き
 ;一行編集の入力内容全消去後、templateと入力することでテンプレートを補完候補として列挙
-;<template1>;ffmpeg -i "%C" -b:v 250k  -s 960x540 -an -threads 0 "%X_1.wmv"
+;<template1>;ffmpeg -i "%C" -b:v 250k -vf scale=640:-1 -an -threads 0 "%X_1.wmv"
 ;<template2>;ffmpeg -i "%C" -b:v 500k -an -threads 0 "%X_1.wmv"
-;<template3>;ffmpeg -i "%C" -b:v 250k -s 320x240 -an -threads 0 "%X_1.wmv"
+;<template3>;ffmpeg -i "%C" -b:v 250k -vf scale=320:-1 -an -threads 0 "%X_1.wmv"
 ;<template4>;ffmpeg -i "%C" -ss 80 -t 120 -b:v 500k  -s 320x240 -an -threads 0 "%X_1.mp4"
-;<template5>;ffmpeg -i "%C" -b:v 250k  -s 640x480 -vf eq=brightness=0.2 -an -threads 0 "%X_1.mp4"
+;<template5>;ffmpeg -i "%C" -b:v 250k -vf scale=640:-1 -vf eq=brightness=0.2 -an -threads 0 "%X_1.mp4"
 ;<template6>;ffmpeg -i "%C" -vf "setpts=10.0*PTS" "%X.mp4"
