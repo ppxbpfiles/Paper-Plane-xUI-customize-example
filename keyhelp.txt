@@ -127,7 +127,7 @@
 ;<[SHIFT+V]PPv[A]～[X]で表示(複数ファイルまとめ読込/バイナリ→テキスト表示)>;%k"\V"
 ;<[SHIFT+W]コメントファイル作成(Write commentfile)>;%k"\W"
 ;<[SHIFT+X]アプリケーションを一覧から選択して実行>;%k"\X"
-;<[SHIFT+Y]PPv[X]でPPc/PPv連動ビュー実行>;%k"\Y"
+;<[SHIFT+Y]MIEL風PPc/PPv連動ビュー実行>;%k"\Y"
 ;<[SHIFT+Z]ファイルリストから選択したファイルを実行>;%k"\Z"
 ;<[SHIFT+F1]ppxヘルプ>;%k"\F1"
 ;<[SHIFT+F2]ドライブ情報>;%k"\F2"
