@@ -6,7 +6,7 @@
 ;<[Space]entry mark>;%k"Space"
 ;<[PageUp]Window scroll (previous 1 page)>;%k"PUp"
 ;<[PageDown] window scroll (one page after) >;%k"PDown"
-;<[End]Show PPx help file>;%k"End"
+;<[End]All files and directories mark>;%k"End"
 ;<[Home]All files mark>;%k"Home"
 ;<[left]Cursor move left>;%k"LEFT"
 ;<[up]Cursor move up>;%k"UP"
