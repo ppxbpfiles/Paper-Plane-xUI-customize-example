@@ -22,9 +22,9 @@ var newestType = PPx.Argument(1);
 var newestFile = null;
 var newestDate = null;
 
-for (var i = 0; i < PPx.Entry.Count; i++) {
-  if (PPx.Entry.Item(i).Size != 0) {
-    //サイズ0のエントリ(=ディレクトリ含む)は除外
+for (var i = 0; i < PPx.EntryAllCount; i++) {
+  if (!(PPx.Entry.Item(i).Attributes & 16)) {
+    //ディレクトリエントリは除外
     if (newestType == "Modify") {
       var date = PPx.Entry.Item(i).DateLastModified;
     }
