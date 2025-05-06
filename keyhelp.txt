@@ -134,7 +134,7 @@
 ;<[SHIFT+F3]>;%k"\F3"
 ;<[SHIFT+F4]Display ALLTASKS control panel>;%k"\F4"
 ;<[SHIFT+F5]>;%k"\F5"
-;<[SHIFT+F6]Search(Partial match, extension unification)>;%k"\F6"
+;<[SHIFT+F6]Search(Partial match, extension unification)/comment search>;%k"\F6"
 ;<[SHIFT+F7]Search string under current directory>;%k"\F7"
 ;<[SHIFT+F8]CPU INFO>;%k"\F8"
 ;<[SHIFT+F9]Command Prompt/Windows Terminal>;%k"\F9"
