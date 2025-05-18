@@ -1,6 +1,6 @@
 @echo off
 REM --- Google Cloud Vision OCRバッチファイル ---
-REM 使用方法: ocr_batch_utf8.bat [入力ファイルパス]
+REM 使用方法: ocr_vision_api_batch.bat [入力ファイルパス]
 
 setlocal EnableDelayedExpansion
 
