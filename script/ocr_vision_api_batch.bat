@@ -5,7 +5,18 @@ REM 使用方法: ocr_vision_api_batch.bat [入力ファイルパス]
 setlocal EnableDelayedExpansion
 
 REM サービスアカウントJSONファイルのパス
+REM システムにユーザー環境変数[GOOGLE_APPLICATION_CREDENTIALS]を登録しない場合ここで設定
 REM set "CREDENTIALS=path/to/your/credentials.json"
+REM
+REM 認証情報ファイルの存在確認
+REM if not exist "%CREDENTIALS%" (
+REM     echo エラー: 認証情報ファイル "%CREDENTIALS%" が見つかりません。
+REM     exit /b 1
+REM )
+REM
+REM 環境変数設定
+REM set "GOOGLE_APPLICATION_CREDENTIALS=%CREDENTIALS%"
+
 
 REM 入力ファイルの取得
 set "INPUT_FILE=%~1"
@@ -25,15 +36,6 @@ REM 入力ファイルのディレクトリ、名前、拡張子を取得
 set "INPUT_DIR=%~dp1"
 set "INPUT_NAME=%~nx1"
 set "OUTPUT_FILE=%INPUT_DIR%%INPUT_NAME%.txt"
-
-REM 認証情報ファイルの存在確認
-REM if not exist "%CREDENTIALS%" (
-REM     echo エラー: 認証情報ファイル "%CREDENTIALS%" が見つかりません。
-REM     exit /b 1
-REM )
-
-REM 環境変数設定
-REM set "GOOGLE_APPLICATION_CREDENTIALS=%CREDENTIALS%"
 
 REM Python スクリプトの存在確認
 if not exist "%~dp0ocr_vision_api.py" (
