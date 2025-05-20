@@ -1,35 +1,32 @@
 /*
- * 入力ファイル（例: sample.jpg）と対応するテキストファイル（sample.jpg.txt または sample.txt）の内容を読み込み、
+ * 入力ファイル（例: file1.jpg）と対応するテキストファイル（file1.jpg.txt または file1.txt）の内容を読み込み、
  * 改行を削除してインデックスファイルに追記します。
+ * 入力ファイルとテキストファイルは出力ファイルの親フォルダ（例: C:\test）にあると仮定。
+ * 入力ファイルのパスは出力ファイルの親フォルダから生成（例: file1.jpg -> C:\test\file1.jpg）。
+ * 出力ファイルは第二引数で指定。フルパスでない場合、カレントディレクトリに保存。
  * 実行方法:
- *   cscript //Nologo create_index.js <フラグ> <出力ファイル> <入力ファイル1> [<入力ファイル2> ...]
+ *   cscript //Nologo create_index_utf8.js <フラグ> <出力ファイル> <入力ファイル1> [<入力ファイル2> ...]
  * 例:
- *   cscript //Nologo create_index.js output_both 00_index.txt C:\test\file1.jpg
+ *   cscript //Nologo create_index_utf8.js output_both C:\test\00_index.txt file1.jpg file2.jpg
  *   - 出力例: "file1.jpg HelloWorld" または "file1.jpg [NoTextFile]" または "file1.jpg [NoTextContent]"
- *   cscript //Nologo create_index.js skip_empty 00_index.txt C:\test\file1.jpg
- *   - テキストファイルがない/空の場合、出力しない
+ *   cscript //Nologo create_index_utf8.js skip_empty 00_index.txt file1.jpg
+ *   - テキストファイルがない/空の場合、出力しない。出力ファイルはカレントディレクトリに保存。
  * 引数:
  *   - 第一引数（フラグ）: テキストファイルが存在しない/空の場合の動作を指定。
  *     - "output_both": 1列目（入力ファイル名）と2列目（[NoTextFile] または [NoTextContent]）の両方を出力。
  *     - "skip_empty": テキストファイルが存在しない/空の場合、出力をスキップ。
- *   - 第二引数（出力ファイル）: 結果を保存するファイル名。ファイル名は「00_index」で始まり、拡張子は「.txt」でなければならない（例：00_index.txt, 00_index_something.txt）。
- *   - 第三引数以降（入力ファイル）: 処理するファイル（例：sample.jpg）。
+ *   - 第二引数（出力ファイル）: 結果を保存するファイル。フルパス指定、またはファイル名のみ（カレントディレクトリに保存）。ファイル名は「00_index」で始まり、拡張子は「.txt」でなければならない。
+ *   - 第三引数以降（入力ファイル）: 入力ファイル名（例: file1.jpg）。フルパスは出力ファイルの親フォルダから生成。
  * 出力:
- *   - 最初の入力ファイルの親フォルダに<出力ファイル>を作成（UTF-8、BOMなし）。
+ *   - 指定されたパス（またはカレントディレクトリ）のファイル（例: C:\test\00_index.txt）に作成（UTF-8、BOMなし）。
  *   - 形式: 入力ファイル名と対応するテキストファイルの内容（改行なし）を空白区切りで1行、各エントリは改行で区切り。
- *   - フラグが "output_both" の場合:
- *     - テキストファイルがない場合、警告を表示せず "[NoTextFile]" を出力。
- *     - テキストファイルの内容が空の場合、警告を表示せず "[NoTextContent]" を出力。
- *   - フラグが "skip_empty" の場合:
- *     - テキストファイルがない/空の場合、警告を表示せず出力をスキップ。
- * エラー:
- *   - 引数が不足、フラグが無効、出力ファイル名が「00_index」で始まらずまたは拡張子が.txtでない、または無効なファイル名の場合にエラーメッセージを表示し、スクリプトを終了。
+ * テキストファイルの検索:
+ *   - 出力ファイルの親フォルダ内のみで検索（例: C:\test\file1.jpg.txt または C:\test\file1.txt）。
  * 注意:
- *   - スペースを含むファイルパスは引用符で囲んでください（例："C:\test\file name.jpg"）。
+ *   - スペースを含むファイル名は引用符で囲んでください（例: "file name.jpg"）。
  *   - テキストファイルはUTF-8エンコーディングを推奨。
- *   - フラグが "output_both" の場合、テキストファイルがない/空のファイルをgrepで一覧可能:
- *     - 例: `grep "\[NoTextFile\]" 00_index.txt`（テキストファイルがない場合）
- *     - 例: `grep "\[NoTextContent\]" 00_index.txt`（テキストファイルが空の場合）
+ *   - 出力ファイルの親フォルダが存在しない場合、エラーを表示。
+ *   - 入力ファイルは出力ファイルの親フォルダに存在する必要があります。
  */
 
 // FileSystemObjectを初期化
@@ -102,7 +99,7 @@ try {
         WScript.Quit(1);
     }
     if (args.length < 2) {
-        WScript.Echo("エラー: 出力ファイル名（例：00_index.txt）を指定してください。");
+        WScript.Echo("エラー: 出力ファイル（例：C:\\test\\00_index.txt または 00_index.txt）を指定してください。");
         WScript.Quit(1);
     }
     if (args.length < 3) {
@@ -117,8 +114,12 @@ try {
         WScript.Quit(1);
     }
 
-    var outputFilename = args(1);
+    var outputFile = args(1);
+    // 出力ファイルをフルパスに変換（相対パスの場合、カレントディレクトリを使用）
+    outputFile = fso.GetAbsolutePathName(outputFile);
+
     // 出力ファイル名が「00_index」で始まり、拡張子が.txtかチェック
+    var outputFilename = fso.GetFileName(outputFile);
     if (!outputFilename.match(/^00_index.*\.txt$/i)) {
         WScript.Echo("エラー: 出力ファイル名は「00_index」で始まり、\n拡張子が「.txt」でなければなりません（例: 00_index_something.txt）: " + outputFilename);
         WScript.Quit(1);
@@ -129,36 +130,37 @@ try {
         WScript.Quit(1);
     }
 
-    var outputDir = fso.GetParentFolderName(fso.GetAbsolutePathName(args(2)));
-    var outputFile = outputDir + "\\" + outputFilename;
+    // 出力ファイルの親フォルダが存在するかチェック
+    var outputDir = fso.GetParentFolderName(outputFile);
+    if (!fso.FolderExists(outputDir)) {
+        WScript.Echo("エラー: 出力ファイルの親フォルダが存在しません: " + outputDir);
+        WScript.Quit(1);
+    }
 
     // 各入力ファイル（第三引数以降）を処理
     for (var i = 2; i < args.length; i++) {
-        var filePath = args(i);
+        // 入力ファイル名（例: file1.jpg）
+        var shortFilename = args(i);
+        // 入力ファイルのフルパスを生成（出力ファイルの親フォルダを使用）
+        var filePath = outputDir + "\\" + shortFilename;
+
         if (!fso.FileExists(filePath)) {
             WScript.Echo("警告: ファイルが存在しません: " + filePath);
             continue;
         }
 
-        // 入力ファイル名（例: sample.jpg）
-        var shortFilename = fso.GetFileName(filePath);
-
-        // 対応するテキストファイル名を決定
-        var txtPath1 = filePath + ".txt"; // sample.jpg.txt
-        var txtPath2 = fso.GetParentFolderName(filePath) + "\\" +
-                       fso.GetBaseName(filePath) + ".txt"; // sample.txt
+        // 対応するテキストファイル名を決定（出力ファイルの親フォルダ内のみ検索）
+        var txtPath1 = filePath + ".txt"; // file1.jpg.txt
+        var txtPath2 = outputDir + "\\" + fso.GetBaseName(filePath) + ".txt"; // file1.txt
 
         var content = "";
-        var hasTextFile = false;
         if (fso.FileExists(txtPath1)) {
             content = readFileContent(txtPath1);
-            hasTextFile = true;
             if (content === "") {
                 content = "[NoTextContent]"; // テキストファイルの内容が空の場合
             }
         } else if (fso.FileExists(txtPath2)) {
             content = readFileContent(txtPath2);
-            hasTextFile = true;
             if (content === "") {
                 content = "[NoTextContent]"; // テキストファイルの内容が空の場合
             }
@@ -171,7 +173,7 @@ try {
             continue; // テキストファイルがない/空の場合、スキップ
         }
 
-        // 出力ファイルに追記（1列目: 入力ファイル名, 2列目: テキスト内容または[NoTextFile]/[NoTextContent]）
+        // 出力ファイルに追記
         appendToOutput(outputFile, shortFilename, content);
     }
 
