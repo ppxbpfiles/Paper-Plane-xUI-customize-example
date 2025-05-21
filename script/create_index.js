@@ -8,7 +8,7 @@
  *   cscript //Nologo create_index_utf8.js <フラグ> <出力ファイル> <入力ファイル1> [<入力ファイル2> ...]
  * 例:
  *   cscript //Nologo create_index_utf8.js output_both C:\test\00_index.txt file1.jpg file2.jpg
- *   - 出力例: "file1.jpg HelloWorld" または "file1.jpg [NoTextFile]" または "file1.jpg [NoTextContent]"
+ *   - 出力例: ""file1.jpg" HelloWorld" または ""file1.jpg" [NoTextFile]" または ""file1.jpg" [NoTextContent]"
  *   cscript //Nologo create_index_utf8.js skip_empty 00_index.txt file1.jpg
  *   - テキストファイルがない/空の場合、出力しない。出力ファイルはカレントディレクトリに保存。
  * 引数:
@@ -19,7 +19,7 @@
  *   - 第三引数以降（入力ファイル）: 入力ファイル名（例: file1.jpg）。フルパスは出力ファイルの親フォルダから生成。
  * 出力:
  *   - 指定されたパス（またはカレントディレクトリ）のファイル（例: C:\test\00_index.txt）に作成（UTF-8、BOMなし）。
- *   - 形式: 入力ファイル名と対応するテキストファイルの内容（改行なし）を空白区切りで1行、各エントリは改行で区切り。
+ *   - 形式: 入力ファイル名（引用符で囲む）と対応するテキストファイルの内容（改行なし）を空白区切りで1行、各エントリは改行で区切り。
  * テキストファイルの検索:
  *   - 出力ファイルの親フォルダ内のみで検索（例: C:\test\file1.jpg.txt または C:\test\file1.txt）。
  * 注意:
@@ -72,12 +72,12 @@ function appendToOutput(outputFile, filename, content) {
             existingContent = existingContent.replace(/^\uFEFF/, ""); // BOM削除
         }
 
-        // 新しい内容を準備
+        // 新しい内容を準備（ファイル名を引用符で囲む）
         var newContent = existingContent;
         if (newContent !== "" && !newContent.match(/\n$/)) {
             newContent += "\n";
         }
-        newContent += filename + " " + content;
+        newContent += "\"" + filename + "\" " + content;
 
         // BOMを削除
         newContent = newContent.replace(/^\uFEFF/, "");
