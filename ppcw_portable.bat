@@ -1,5 +1,5 @@
 @echo off
-rem fonton、fontrを使ってフォントをシステムにインストールせず一時登録してPPxを使う。
+rem fonton(ver1.1以降)を使ってフォントをシステムにインストールせず一時登録してPPxを使う。
 
 rem PPxをインストールしているディレクトリに移動
 pushd "%~dp0"
@@ -10,7 +10,7 @@ call fonton64.exe
 
 timeout /t 1
 
-start pptrayw.exe -c *linecust rmfont,KC_main:CLOSEEVENT,*if %%%%*ppxlist(+C) == 1 %%%%:*wait 300 %%%%:*launch "%%0fontr64.exe" %%%%:*linecust rmfont,KC_main:CLOSEEVENT,
+start pptrayw.exe -c *linecust rmfont,KC_main:CLOSEEVENT,*if %%%%*ppxlist(+C) == 1 %%%%:*wait 300 %%%%:*launch "%%0fonton64.exe" -s -r %%%%:*linecust rmfont,KC_main:CLOSEEVENT,
 
 rem PPcを起動
 start ppcw.exe
