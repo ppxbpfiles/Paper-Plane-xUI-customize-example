@@ -29,31 +29,31 @@ var basePath = PPx.Extract("%0");
 // チェック対象モジュールリスト
 var modules = [
   //PPx拡張モジュール
-  { file: "ppxccx64.dll", name: "PPx CCX Module", path: "" },
-  { file: "PPxCFX64.dll", name: "PPx CFX Module", path: "" },
-  { file: "PPxETP64.dll", name: "PPx Everything Search Module", path: "" },
-  { file: "PPxJUNK64.dll", name: "PPx Junk Module", path: "" },
-  { file: "PPxMES64.dll", name: "PPx Message Module", path: "" },
-  { file: "PPxSCR64.dll", name: "PPx Script Module", path: "" },
-  { file: "PPxTEXT64.dll", name: "PPx Text Module", path: "" },
-  { file: "PPxWIN64.dll", name: "PPx Window Module", path: "" },
-  { file: "ppxws64.dll", name: "PPx WS Module", path: "" },
+  { file: "PPxccx64.dll", name: "PPx CCX Module", path: "" },
+  { file: "PPxcfx64.dll", name: "PPx CFX Module", path: "" },
+  { file: "PPxetp64.dll", name: "PPx Everything Search Module", path: "" },
+  { file: "PPxjunk64.dll", name: "PPx Junk Module", path: "" },
+  { file: "PPxmes64.dll", name: "PPx Message Module", path: "" },
+  { file: "PPxscr64.dll", name: "PPx Script Module", path: "" },
+  { file: "PPxtext64.dll", name: "PPx Text Module", path: "" },
+  { file: "PPxwin64.dll", name: "PPx Window Module", path: "" },
+  { file: "PPxws64.dll", name: "PPx WS Module", path: "" },
   //正規表現・migemoモジュール
   { file: "bregonig.dll", name: "bregonig.dll", path: "" },
   { file: "migemo.dll", name: "migemo.dll", path: "" },
   // 圧縮・解凍・統合アーカイバDLL
   { file: "7z.dll", name: "7-zip DLL", path: "" },
   { file: "7z.exe", name: "7-zip EXE", path: "" },
-  { file: "RAR.exe", name: "console RAR EXE", path: "tools\\" },
-  { file: "UNBYPASS.dll", name: "UNBYPASS DLL", path: "" },
+  { file: "rar.exe", name: "console RAR EXE", path: "tools\\" },
+  { file: "unbypass.dll", name: "UNBYPASS DLL", path: "" },
   { file: "unbypass.exe", name: "unbypass EXE", path: "" },
   { file: "7-zip64.dll", name: "7-zip64 DLL", path: "" },
-  { file: "UNRAR64.DLL", name: "UNRAR64 DLL", path: "" },
-  { file: "UNRAR64J.DLL", name: "UNRAR64J DLL", path: "" },
-  { file: "UNZZIP64.dll", name: "UNZZIP64 DLL", path: "" },
-  { file: "UNLHA32.dll", name: "UNLHA32 DLL", path: "" },
-  { file: "CAB32.dll", name: "CAB32 DLL", path: "" },
-  { file: "TAR64.dll", name: "TAR64 DLL", path: "" },
+  { file: "unrar64.dll", name: "UNRAR64 DLL", path: "" },
+  { file: "unrar64j.dll", name: "UNRAR64J DLL", path: "" },
+  { file: "unzzip64.dll", name: "UNZZIP64 DLL", path: "" },
+  { file: "unlha32.dll", name: "UNLHA32 DLL", path: "" },
+  { file: "cab32.dll", name: "CAB32 DLL", path: "" },
+  { file: "tar64.dll", name: "TAR64 DLL", path: "" },
   //Susieプラグイン
   { file: "iftwic.sph", name: "iftwic.sph", path: "" },
   { file: "ifjpegt.sph", name: "ifjpegt.sph", path: "" },
@@ -61,14 +61,13 @@ var modules = [
   { file: "ifttf.sph", name: "ifttf.sph", path: "" },
   { file: "ifextend.sph", name: "ifextend.sph", path: "" },
   { file: "ifavif.sph", name: "ifavif.sph", path: "" },
-  { file: "axpdf.sph", name: "axpdf.sph", path: "" },
   { file: "axtpsd.sph", name: "axtpsd.sph", path: "" },
   { file: "axttc.sph", name: "axttc.sph", path: "" },
   { file: "ifgif.sph", name: "ifgif.sph", path: "" },
   { file: "iftgdip.sph", name: "iftgdip.sph", path: "" },
   { file: "iftwebp.sph", name: "iftwebp.sph", path: "" },
-  { file: "pdfium.dll", name: "pdfium.dll", path: "" },
-  { file: "runsph.exe", name: "runsph.exe", path: "" },
+  { file: "axpdf.sph", name: "axpdf.sph", path: "" },
+  { file: "pdfium.dll", name: "axpdf.sph用DLL", path: "" },
   //Susieプラグイン（SPI）
   { file: "ifcrw_t.spi", name: "ifcrw_t.spi", path: "SPI\\" },
   { file: "ifdxfft.spi", name: "ifdxfft.spi", path: "SPI\\" },
@@ -117,5 +116,3 @@ var result = PPx.Extract(
 if (!forceMode && result === "1") {
   PPx.Execute("*setcust _user:checkmodule=0");
 }
-
-// スクリプト終了
