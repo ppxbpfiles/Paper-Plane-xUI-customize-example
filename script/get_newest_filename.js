@@ -1,35 +1,42 @@
 //!*script
-// ãƒ•ã‚¡ã‚¤ãƒ«å get_newest_filename.js
-// æœ€å¾Œã«å¤‰æ›´ã—ãŸãƒ•ã‚¡ã‚¤ãƒ«åã¾ãŸã¯æœ€å¾Œã«ã‚¢ã‚¯ã‚»ã‚¹ã—ãŸãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¿”ã™ã€‚
-// ç¬¬ä¸€å¼•æ•°: æœ€å¾Œã«å¤‰æ›´ã—ãŸãƒ•ã‚¡ã‚¤ãƒ« = Modify æœ€å¾Œã«ã‚¢ã‚¯ã‚»ã‚¹ã—ãŸãƒ•ã‚¡ã‚¤ãƒ« = Access
+// ƒtƒ@ƒCƒ‹–¼: get_newest_filename.js
+// ŠT—v: PPx‚ÅŒ»İŠJ‚¢‚Ä‚¢‚éƒfƒBƒŒƒNƒgƒŠ‚É‚ ‚éAÅŒã‚É•ÏX‚Ü‚½‚ÍƒAƒNƒZƒX‚µ‚½ƒtƒ@ƒCƒ‹–¼‚ğ•Ô‚·B
+// ‘æˆêˆø”: "Modify"iÅIXVƒtƒ@ƒCƒ‹j‚Ü‚½‚Í "Access"iÅIƒAƒNƒZƒXƒtƒ@ƒCƒ‹j
 //
-// ä½¿ç”¨ä¾‹
+// g—p—á:
 // KC_main = {
-// 8    ,%J %*script("%0script\get_newest_filename.js" Modify) %:*range cursor -highlight:7
+// 8    ,%J %*script("%0script\get_newest_filename.js" Modify)
 // 9    ,%J %*script("%0script\get_newest_filename.js" Access)
 // }
-//
 
-// å¼•æ•°ãŒãªã‘ã‚Œã°çµ‚äº†
+// ˆø”‚ª‚È‚¯‚ê‚ÎI—¹
 if (PPx.Arguments.Length < 1) {
-  PPx.Echo("å¼•æ•°ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“");
+  PPx.Echo("ˆø”‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñ");
   PPx.Quit();
 }
 
-var newestType = PPx.Argument(1);
+var newestType = PPx.Argument(0);
+if (newestType !== "Modify" && newestType !== "Access") {
+  PPx.Echo('ˆø”‚Í "Modify" ‚Ü‚½‚Í "Access" ‚Åw’è‚µ‚Ä‚­‚¾‚³‚¢');
+  PPx.Quit();
+}
+
 var newestFile = null;
 var newestDate = null;
 
+// ŠeƒGƒ“ƒgƒŠ‚ğ‘–¸
 for (var i = 0; i < PPx.Entry.Count; i++) {
+  // ƒfƒBƒŒƒNƒgƒŠiAttributes & 16j‚ğœŠO
   if (!(PPx.Entry.Item(i).Attributes & 16)) {
-    //ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚¨ãƒ³ãƒˆãƒªã¯é™¤å¤–
-    if (newestType == "Modify") {
-      var date = PPx.Entry.Item(i).DateLastModified;
+    var date = null;
+    // w’èƒ^ƒCƒv‚É‰‚¶‚Ä“ú•t‚ğæ“¾
+    if (newestType === "Modify") {
+      date = PPx.Entry.Item(i).DateLastModified;
+    } else if (newestType === "Access") {
+      date = PPx.Entry.Item(i).DateLastAccessed;
     }
-    if (newestType == "Access") {
-      var date = PPx.Entry.Item(i).DateLastAccessed;
-    }
-    if (newestDate == null || date > newestDate) {
+    // ‚æ‚èV‚µ‚¢“ú•t‚È‚ç‹L˜^
+    if (newestDate === null || date > newestDate) {
       newestFile = PPx.Entry.Item(i).Name;
       newestDate = date;
     }
