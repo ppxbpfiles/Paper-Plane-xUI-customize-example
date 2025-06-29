@@ -1,6 +1,6 @@
 # PPx Customize Example
 
-TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
+TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 
 ---
 
@@ -12,24 +12,23 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 
 ## このカスタマイズファイルの特長
 
-- タブなし独立1画面による軽快な動作
+- タブなし独立 1 画面による軽快な動作
 - 目的別にまとめて管理できるタブ窓
 - サブ窓（参照窓）を使って処理先を指定する方式のファイルコピー
-- zoxideによるパス補完
-- あらかじめ生成したディレクトリパスリストを使ってジャンプ   [Shift+G]
-- everything search Engineを使って検索	          [W]メニューから選択
-- あらかじめ生成した実行パスリストを使ってジャンプ 	  [Shift+X]
-- スクリプト不使用。（今のところは）
+- zoxide によるパス補完
+- あらかじめ生成したディレクトリパスリストを使ってジャンプ [Shift+G]
+- everything search Engine を使って検索 [W]メニューから選択
+- あらかじめ生成した実行パスリストを使ってジャンプ [Shift+X]
 
 ---
 
 ## ファイル
 
 - PPx_kuro_unicode_x64.CFG（カスタマイズファイル本体）
-- PPx_color_xxxx.CFG（色設定ファイル（着せ替え用）
+- PPx_color_xxxx.CFG（色設定ファイル（着せ替え用））
 - font_example_XXX.cfg (フォント設定例)
-- l_keyhelp.txt（キー操作一覧を[F1]キーで表示）
-- key検討用\ppxkey.xlsx（キー操作検討・エイリアス登録している実行ファイル詳細）
+- keyhelp.txt（キー操作一覧を[F1]キーで表示）
+- key 検討用\ppxkey.xlsx（キー操作検討・エイリアス登録している実行ファイル詳細）
 
 ---
 
@@ -37,9 +36,8 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 
 ### ファイルのコピー
 
-以下のファイル一式を必要に応じてPPxのインストールフォルダにコピーしてください。
-
-フォルダ名が記載されているものに関してはサブフォルダを作ってそちらに入れてください。
+以下のファイル一式を、必要に応じて PPx のインストールフォルダにコピーしてください。
+「フォルダ」列に記載がある場合は、そのサブフォルダを作成し、該当ファイルを格納してください。
 
 **A）PPx 拡張モジュール**
 
@@ -48,6 +46,10 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 - Text Module （PPxtext64.dll）
 - Everything Search Module（PPXETP64.dll）
 - Module Junk Parts（PPxjunk64.dll）
+- PPx CCX Module（PPxccx64.dll）
+- PPx Script Module（PPxscr64.dll）
+- PPx Window Module（PPxwin64.dll）
+- PPx WS Module（PPxws64.dll）
 - Common Dialog Extender（PPDEX64.exe/PPDEX.exe）
 
 **B）外部モジュール**
@@ -66,11 +68,11 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 - UNZZIP64.dll
 - UNLHA32.dll
 - CAB32.dll
-- UNBYPASS.dll
 - TAR64.dll
-- unbypass.exe/unbypass.dll
+- UNBYPASS.dll
+- unbypass.exe
 
-**D）64bit Susieプラグイン**
+**D）64bit Susie プラグイン**
 
 - iftwic.sph
 - ifjpegt.sph
@@ -78,10 +80,15 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 - ifttf.sph
 - ifextend.sph
 - ifavif.sph
+- axtpsd.sph
+- axttc.sph
+- ifgif.sph
+- iftgdip.sph
+- iftwebp.sph
 - axpdf.sph/pdfium.dll
-- runsph.exe(PDFのサムネイル表示で必要)
+- runsph.exe(PDF のサムネイル表示で必要)
 
-**E）32bit Susieプラグイン（フォルダ：SPI）**
+**E）32bit Susie プラグイン（フォルダ：SPI）**
 
 - ifcrw_t.spi（CANON CRW）
 - ifdxfft.spi（DXF）
@@ -91,13 +98,14 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 **F）コマンドラインツール**
 
 - xdoc2txt
-  [V]キーで%ME_pagerの設定に従ってバイナリドキュメントファイルに含まれる
-- テキストをPPv[A]で閲覧することが出来ます。
-- zoxide（フォルダ:tools)
-- es.exe（フォルダ:tools)
-- exiftool（フォルダ:tools)
-- busybox64u
-- ripgrep（フォルダ:tools)
+  [V]キーで%ME_pager の設定に従ってバイナリドキュメントファイルに含まれる
+- テキストを PPv[A]で閲覧することが出来ます。
+- zoxide.exe（フォルダ:tools）
+- es.exe（フォルダ:tools）
+- exiftool（フォルダ:tools）
+- busybox64u.exe
+- rg.exe（フォルダ:tools）
+- fcp.exe（フォルダ:tools）
 - ls2lf.exe（フォルダ:auxcmd）
 
 **G）フォント**
@@ -108,86 +116,74 @@ TORO氏作のファイラーPaper Plane xUIのカスタマイズ例です。
 - UDEV Gothic (https://github.com/yuru7/udev-gothic)
 - ばぐまるゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
 
-　※ちょっと太めのゼロ斜め線入りが個人的には好みです。
+※ちょっと太めのゼロ斜め線入りが個人的には好みです。
 
 **一行編集・ダイアログ**
 
 - Migu 1c (https://github.com/yuru7/udev-gothic)
-- Nasu (https://itouhiro.hatenablog.com/entry/20140917/font)
-- ばぐまるPゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
+- やさしさゴシック (https://www.fontna.com/blog/379/)
+- ばぐまる P ゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
+
+**H）スクリプト**
+
+必須ではないがあれば便利なもの
+
+- check_installed_module.js（必要なファイルがインストールされているかチェック）
+- get_newest_filename.js（カレントディレクトリのファイルの中で、最後に更新されたもの、または最後にアクセスされたものの名前を返す）
+- ocr_vision_api.py（Google Vision OCR を python から使うスクリプト）
+- ocr_vision_api_batch.bat（ocr_vision_ocr.py を少しだけ使いやすくするための bat ファイル）
+- create_index.js（Google Vision OCR で OCR 処理したファイルから 00_index.txt を生成するスクリプト）
 
 ---
 
 ### カスタマイズファイルの読み込み方法
 
-1. PPxフォルダーに実行ファイルと、関連ファイル一式を置きます。
-2. PPx_kuro_unicode_x64.CFGおよび同階層にあるファイルとサブフォルダの内容をPPxフォルダーに配置します
-3. PPx_kuro_unicode_x64.CFGの内容を読み込みます。
+1. PPx フォルダーに実行ファイルと関連ファイル一式を置きます。
+2. PPx_kuro_unicode_x64.CFG および同階層にあるファイルやサブフォルダの内容を PPx フォルダーに配置します。
+3. PPx_kuro_unicode_x64.CFG の内容を読み込みます。
 
 ---
 
 ### 初期設定
 
-**A） X_saveフォルダーの設定**
+**A） X_save フォルダーの設定**
 
- **KC_mainのFIRSTEVENTに記述している設定にしたがって自動で作成されます。**
+**KC_main の FIRSTEVENT に記述している設定にしたがって自動で作成されます。**
 
-1. PPxインストールフォルダーがC:\program Files以下（たとえば、C:\Program Files\PPx）の場合
+1. PPx インストールフォルダーが C:\Program Files 以下（例：C:\Program Files\PPx）の場合
 
-   X_save＝%'APPDATA'\TOROID\PPx\userdata
+   X_save = %'APPDATA'\TOROID\PPx\userdata
 
-2. PPxインストールフォルダーがC:\program Files以外（ポータブルインストール）の場合
+2. PPx インストールフォルダーが C:\Program Files 以外（ポータブルインストール）の場合
 
-   X_save=（PPxインストールフォルダー）\userdata
+   X_save = （PPx インストールフォルダー）\userdata
 
-となります。
+X_save フォルダ内には、リストファイル保存用の listfile フォルダも自動で作成されます。
 
-X_saveフォルダにリストファイル保存用としてlistfileフォルダも作成されます。
+**B）zoxide の設定**
 
-**B）zoxideの設定**
+zoxide.exe を（PPx インストールフォルダー）\tools フォルダに配置してください。
 
-zoxide.exeを（PPxインストールフォルダー）\tools以下に配置してください。
+デフォルト設定の場合、独立窓 PPc[A] 起動時に zoxide の db（db.zo）を PPx の補完候補用ファイル（l_dirzoxide.txt）に自動変換します。
 
-（デフォルト設定をそのまま使う場合）
+**C）Everything の設定**
 
-独立窓PPc[A]起動時にzoxideのdb（db.zo）をPPxの補完候補として使える形式
+Everything Search Module をインストールすると、一行編集の補完リストにも Everything の検索結果が表示されますが、ファイル・ディレクトリの区別がなく使いにくいため、OFF（ETP_PART=0）にすることを推奨します。
 
-（l_dirzoxide.txt）に変換するようにしています。
+Everything Search Module の検索結果をリストアップしない代わりに、  
+実行ファイル専用（l_exeEverything.txt）とディレクトリ専用（l_dirEverything.txt）の補完リストを Everything のコマンドライン版 es.exe で作成し、専用の一行編集窓から呼び出してジャンプできます（[Shift+Z]、[Shift+G]）。
 
-**C）Everythingの設定**
+また、実行ファイルリストを使って [Shift+X] キーで任意のプログラムからファイルを開くこともできます。
 
-Everything Search Moduleをインストールすると、一行編集の補完リストにも
+**設定手順：**
 
-Everythingの検索結果がリストアップされますが、これはファイル・ディレクトリの種別なく
-
-補完候補が挙がってきて使いにくいと思いますので、OFF（ETP_PART=0）にすることをお勧めします。
-
-Everything Search Moduleの検索結果をリストアップしない代わりに、
-
-実行ファイル専用の補完リスト（l_exeEverything.txt）と
-
-ディレクトリ専用の補完リスト（l_dirEverything.txt）を
-
-Everythingのコマンドライン版es.exe経由で作成し、専用の一行編集窓から補完リストを読み込んで
-
-ジャンプする機能を作成しています。それぞれ、[Shift+Z][Shift+G]で呼び出すことが出来ます。
-
-また実行ファイルのリストを使って[Shift＋X]キーで任意のプログラムからファイルを開けるようにもしています。
-
-以下のように設定します。
-
-1. メニュー　設定（&O）→ Everythingを最小化してバックグラウンドで特権実行
-   →　EverythingのAdmin起動用としてタスクマネージャーに登録　メニューを選択すると
-   EverythingAdminExecという名前（万が一既に存在するときは変更可能です）のサービスを登録する一行編集メニューが出ますので、「OK」を押してください。
-2. メニュー　設定（&O）→ Everythingを最小化してバックグラウンドで特権実行
-   →　EverythingのAdmin起動用としてタスクマネージャーを確認　メニューを選択すると
-   以下のような表示が出てきたら設定は正しくできています。
-
+1. メニュー「設定（&O）」→「Everything を最小化してバックグラウンドで特権実行」を選び、サービス登録ダイアログが出たら「OK」を押します。
+2. もう一度同じメニューでサービスが登録されているか確認します。  
+   正しく設定されていれば確認画面が表示されます。
    ![1716628595438](image/PPx_cust_Readme/1716628595438.png)
-3. EverythingのETPサーバ側に設定が必要です、図のように設定するとそのまま使えます。
-   パスワードの初期値は「password」です。
+3. Everything の ETP サーバ側も設定が必要です。図の通り設定してください（パスワード初期値は「password」）。
    ![1716620910860](image/PPx_cust_Readme/1716620910860.png)
-4. PPxのCFGでは、以下のように設定しています。本体側の設定を変えるときは適宜書き換えてください。
+4. PPx の CFG では、以下のように設定します。必要に応じて書き換えてください。
 
 ```.js
   _User	= {
@@ -200,100 +196,56 @@ Everythingのコマンドライン版es.exe経由で作成し、専用の一行�
   }
 ```
 
-[W]キーを押して、ファイル名検索（Everything）メニューを選ぶと
-Everythingで検索するための一行編集窓が開きます。
+[W]キーでファイル名検索（Everything）メニューを選ぶと、一行編集窓が開きます。
 
 ![1716626930901](image/PPx_cust_Readme/1716626930901.png)
 
-「Fullp/Name(S)」ボタンは。検索対象を入力した後、検索対象となるドライブ/パスを
+「Fullp/Name(S)」ボタンは、検索対象のドライブやパスをツリーから選択して絞り込むためのボタンです。もう一度押すとパス指定が解除されます（トグル動作）。
 
-限定するためにツリーメニューで検索対象を絞り込むためのパスを入力するボタンです。
+サブ窓（参照窓）にもこの一行編集窓を表示して、Everything 検索結果一覧を出すことができます。
 
-もう一度押すとパスは削除されます。トグル切り替えです。
+ファイル hoge を同じフォルダにコピーしたい場合は、コピー先にファイル hoge のパスをそのまま指定できます。これによりファイルの仕分けが効率化されます。
 
-サブ窓（参照窓）にこの一行編集窓を出してEverything検索結果一覧を出すこともできます。
+**D）Susie プラグインの設定**
 
-ファイルhogeが存在するところと同じフォルダにコピーしたいときはコピー先に
+PDF をプレビューしたい場合は ifextend.sph の拡張子に PDF を登録してください。  
+axpdf.sph は「使用する」のチェックを外してください（インストール自体は必要です）。
 
-ファイルhogeのパスをそのまま指定してもよく、ファイルの仕分け操作が捗ります。
+**E）PPXUMASK.TXT・PPXUPATH.TXT の配置**
 
-**D)Susie Pluginの設定**
-
-PDFのプレビューしたい場合はifextend.sphの拡張子にPDFを登録してください。
-
-axpdf.sphは「使用する」のところをチェック外してください。PPxから直接呼び出さないだけでインストールは必要です。
-
-![1716632886764](image/PPx_cust_Readme/1716632886764.png)
-
-**E） PPXUMASK.TXT PPXUPATH.TXT PPXUPATH.TXTの配置**
-
-PPWXXXX.DATが存在するフォルダに配置します。このカスタマイズ（PPx_kuro_unicode.cfg）においてはX_saveで指定された
-
-ディレクトリ(～\userdata)の1つ上位のディレクトリに配置することになります。
+PPWXXXX.DAT が存在するフォルダに配置してください。このカスタマイズ（PPx_kuro_unicode.cfg）では、X_save で指定したディレクトリ（～\userdata）の 1 つ上のフォルダに配置します。
 
 ---
 
-## カスタマイザー（PPCUSTW.exe）やメニューで設定できないところ
+### 起動時およびアクティブ時の初期化設定
 
- **A) 以下の設定は起動時に初期化するためKC_mainのFIRSTEVENTに
-     直接記述しています。**
+**KC_main の FIRSTEVENT では、以下の初期化処理を行います。**
 
-```.js
-FIRSTEVENT	,*setcust X_save=userdata %:*ifmatch /Program Files/,%0 %:*setcust X_save=%'APPDATA'\TOROID\PPx\userdata
-	*makedir %*name(DC,%*getcust(X_save)\listfile,"%0") %m"X_saveで指定したディレクトリがなければ作成する。"
-	*setsortentry &Z:名前数値順 %m"ソートは名前順で、数字桁が違っても数字の大小を認識する並びがデフォルト"
-	*setmaskentry %m"起動時ファイルマスクをリセットする。"
-	*ppvoption sync off %m"Shift+Yキーで開く連動ビューPPv[X]はONにして使用したあとOFFにし忘れて変な挙動になったとき連動ビューが原因だと気づきにくい。PPc起動時は必ずOFFにする。"
-	*ifmatch !0,0%n# %: *viewstyle 保持設定({と}で調整)
-	*ifmatch !0,0%n# %: *ifmatch !0,0%*getcust(S_memdirectory:%n) %:*jumppath %*getcust(S_memdirectory:%n)
-	*ifmatch CA,%n %:*ifmatch "option:e,a:d-", %g'zoxide' %:*run -noppb -hide -nostartmsg zoxide query -l > "%*name(DCN,%*getcust(X_save),"%0")\l_dirZoxide.txt"
-	*ifmatch CW,%n %:*viewstyle コメント
-```
+- PPx 拡張モジュールのインストールチェック（script\check_installed_module.js を利用）
+- X_save フォルダの自動設定
+  - C:\Program Files\PPx の場合 → X_save = %APPDATA%\TOROID\PPx\userdata
+  - それ以外の場合 → X_save = （PPx インストールフォルダー）\userdata
+- X_save フォルダ内に listfile フォルダがなければ自動作成
+- エントリの並び順を「名前数値順」に設定
+- 起動時ファイルマスクのリセット
+- 連動ビュー（PPv[X]）を必ず OFF に設定
+- タブ付きウィンドウ起動時のエントリ表示設定
+- タブ付きウィンドウ起動時、記憶したディレクトリがあれば自動でジャンプ
+- zoxide.exe が存在する場合、zoxide の db.zo を l_dirZoxide.txt に自動変換
+- PPc[W]起動時、コメント表示用のビュー設定
 
-- X_saveディレクトリ（1行目）
-- 起動時エントリの並び（3行目）
-- 起動時ファイルマスクリセット（4行目）
-- 起動時連動ビューOFF（5行目）
-- タブ付窓起動時のエントリ表示設定（6行目）
-- タブ付窓起動時の初期表示するエントリ（7行目）
+**KC_main の ACTIVEEVENT では、以下の処理を行います。**
 
-  ※「.」（このディレクトリ）表示されたエントリ上でENTERを押して
+- XC_rmsk のデフォルト値を設定（GUI で設定してもこの設定で上書きされます）
+- REF ボタンの設定（条件により K_lied:REFBUTTON に \*refsel を設定）
+- PPc[X] 起動後に他の PPc がアクティブになった場合、コマンドを無効化しメッセージを表示
+- Edit_OptionCmd および Edit_OptionTitle の初期化
 
-  ディレクトリを記憶していたら次回起動時はそこを開きます。
-
-  なお、記憶したディレクトリへは「INS」キーでジャンプできます。
-
-  変更したい場合は、設定を適宜書き換えてください。
-
-**B) 以下の設定は一行編集を閉じた後初期化するためKC_mainのACTIVEEVENTに
-     直接記述しています。**
-
-```.js
-ACTIVEEVENT	,*setcust X_flst=3,1,0,300 %m"XC_flstのデフォルト値を設定。GUIで設定してもここの設定で書き換えられるので要注意！一行編集起動前に設定を変えてもACTIVEEVENT読み込み時リセットされるようにした。"
-	*setcust XC_rmsk=1,1,0,0 %m"XC_rmskのデフォルト値を設定。GUIで設定してもここの設定で書き換えられるので要注意！"
-	*ifmatch !CY,%n %:*setcust K_lied:REFBUTTON,*refsel
-	*ifmatch !CX;!CY,%n %:*string u,temp_exec = %%I"PPc[X]起動後に他のPPcがアクティブになったため、コマンドを無効にしました。"
-	*string i,Edit_OptionCmd=
-	*string i,Edit_OptionTitle=
-```
-
-- x_flst（1行目）　一行編集の補完リストは1枚がデフォルトで
-
-  一時的に上下2枚設定にしたときはここでリセットしています。
-- XC_rmsk（2行目） ワイルドカード検索を基本に、一時的に
-
-  部分一致検索にしたときはここでリセットしています。
-- K_liedのREFBUTTON（3行目）　一行編集の「参照」ボタン[Alt+F]です。
-
-  デフォルトはサブ窓（参照窓）を立ち上げてファイルやフォルダをそのまま指定します。（*refsel）
-- 圧縮ファイルの作成先など、ファイル名はそのままにパスだけ差し替える
-
-  （*refselwithoutfile）ように一時設定したときは、ここでリセットします。
-- オプションボタン付き一行編集のリセット（5行目、6行目）
+これらの設定は KC_main の FIRSTEVENT および ACTIVEEVENT に記述されており、PPx 起動時やアクティブ時に自動で実行されます。
 
 ---
 
-## おわりに
+### おわりに
 
-- 改変はご自由にどうぞ
-- この文章の内容は予告なく加筆・修正されます。
+- 本カスタマイズは自由に改変してご利用いただけます。
+- 本ドキュメントの内容は予告なく加筆・修正されることがあります。
