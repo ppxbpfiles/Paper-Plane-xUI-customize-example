@@ -130,9 +130,9 @@ TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 
 - check_installed_module.js（必要なファイルがインストールされているかチェック）
 - get_newest_filename.js（カレントディレクトリのファイルの中で、最後に更新されたもの、または最後にアクセスされたものの名前を返す）
-- ocr_vision_api.py（Google Vision OCR を python から使うスクリプト）
+- ocr_vision_api.py（Google Vision OCR を python から使う）
 - ocr_vision_api_batch.bat（ocr_vision_ocr.py を少しだけ使いやすくするための bat ファイル）
-- create_index.js（Google Vision OCR で OCR 処理したファイルから 00_index.txt を生成するスクリプト）
+- create_index.js（Google Vision OCR で OCR 処理したファイルから 00_index.txt を生成）
 
 ---
 
