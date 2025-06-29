@@ -75,13 +75,17 @@ var modules = [
   { file: "runspi.exe", name: "runspi.exe", path: "SPI\\" },
   //その他外部ツール
   { file: "busybox64u.exe", name: "busybox64", path: "" },
+  { file: "ppdex64.exe", name: "PPx common dialog extender", path: "" },
+  { file: "ppdex.exe", name: "PPx common dialog extender", path: "" },
+  { file: "ppdex64.dll", name: "PPx common dialog extender DLL", path: "" },
+  { file: "ppdex.dll", name: "PPx common dialog extender DLL", path: "" },
   { file: "xdoc2txt.exe", name: "xdoc2txt", path: "tools\\" },
   { file: "zoxide.exe", name: "zoxide", path: "tools\\" },
   { file: "es.exe", name: "everything cli", path: "tools\\" },
   { file: "exiftool.exe", name: "exiftool", path: "tools\\" },
   { file: "rg.exe", name: "ripgrep", path: "tools\\" },
   { file: "fcp.exe", name: "fastcopy cli", path: "tools\\" },
-  { file: "ls2lf.exe", name: "ls2lf", path: "auxcmd\\" }
+  { file: "ls2lf.exe", name: "ls2lf", path: "auxcmd\\" },
 ];
 
 // 欠如モジュールのエラーメッセージ収集
