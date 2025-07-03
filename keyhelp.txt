@@ -195,7 +195,7 @@
 ;<[Ctrl+F9]Launch command prompt with administrator privileges>;%k"^F9"
 ;<[Ctrl+F10]Create a folder for each day and sort and move>;%k"^F10"
 ;<[Ctrl+F11]Launch new PPc window with admin rights>;%k"^F11"
-;<[Ctrl+F12]Duplicate entry (limited targets)>;%k"^F12"
+;<[Ctrl+F12]Duplicate directory (limited targets)>;%k"^F12"
 ;<[Alt+BackSpace]Go to most recent path entry history. If current directory is the most recent path entry history, go to the previous directory>;%k"&BS"
 ;<[Alt+Tab]>;%k"&Tab"
 ;<[Alt+Enter]Show File Properties>;%k"&Enter"
