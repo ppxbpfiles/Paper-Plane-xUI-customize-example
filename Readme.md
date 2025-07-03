@@ -184,7 +184,7 @@ Everything Search Module の検索結果をリストアップしない代わり�
    ![1716620910860](image/PPx_cust_Readme/1716620910860.png)
 4. PPx の CFG では、以下のように設定します。必要に応じて書き換えてください。
 
-    ```.js
+```.js
   _User	= {
   ETP_FULL	= 10000
   ETP_PART	= 0
@@ -193,7 +193,7 @@ Everything Search Module の検索結果をリストアップしない代わり�
   ETP_USER	= username
   EverythingAdminExec	= EverythingAdminExec
   }
-    ```
+```
 
 [W]キーでファイル名検索（Everything）メニューを選ぶと、一行編集窓が開きます。
 
@@ -228,6 +228,7 @@ PDF をプレビューしたい場合は `ifextend.sph` の拡張子に PDF を�
 *   エントリの並び順を「名前数値順」に設定
 *   起動時ファイルマスクのリセット
 *   連動ビュー（`PPv[X]`）を必ず OFF に設定
+    *   サブ窓でのコピー・移動にはPPx Message Moduleが必須ですが、何らかの理由で動作しない場合に備え、コメントアウトを解除すると有効になる代替手段を用意しています。この設定は、その代替手段を有効にした際に使用されます。
 *   タブ付きウィンドウ起動時のエントリ表示設定
 *   タブ付きウィンドウ起動時、記憶したディレクトリがあれば自動でジャンプ
 *   `zoxide.exe` が存在する場合、zoxide の `db.zo` を `l_dirZoxide.txt` に自動変換
