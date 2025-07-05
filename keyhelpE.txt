@@ -67,7 +67,7 @@
 ;<[=]Set same path as other window>;%k"="
 ;<[:]>;%k":"
 ;<[;]Change entry display format>;%k";"
-;<[,]Search for PPxID and jump>;%k","
+;<[,]Search for PPxID and select window>;%k","
 ;<[+]Mark specific name>;%k"+"
 ;<[-]Unmark specific name>;%k"-"
 ;<[.]Detail/Image Thumbnail Display Switching>;%k"."
