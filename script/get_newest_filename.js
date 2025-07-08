@@ -21,7 +21,7 @@ if (newestType !== "Modify" && newestType !== "Access") {
   PPx.Quit();
 }
 
-var newestFile = null;
+var newestFile = "";
 var newestDate = null;
 
 // ŠeƒGƒ“ƒgƒŠ‚ğ‘–¸
