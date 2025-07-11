@@ -12,23 +12,23 @@ TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 
 ## このカスタマイズファイルの特長
 
-*   タブなしの独立した1画面による軽快な動作
-*   目的別にまとめて管理できるタブ窓
-*   サブ窓（参照窓）で処理先を指定するファイルコピー方式
-*   zoxide によるパス補完
-*   事前に生成したディレクトリパスリストを使用したジャンプ（[Shift+G]）
-*   Everything Search Engine を使用した検索（[W]メニューから選択）
-*   あらかじめ生成した実行パスリストを使ってジャンプ（[Shift+X]）
+- タブなしの独立した 1 画面による軽快な動作
+- 目的別にまとめて管理できるタブ窓
+- サブ窓（参照窓）で処理先を指定するファイルコピー方式
+- zoxide によるパス補完
+- 事前に生成したディレクトリパスリストを使用したジャンプ（[Shift+G]）
+- Everything Search Engine を使用した検索（[W]メニューから選択）
+- あらかじめ生成した実行パスリストを使ってジャンプ（[Shift+X]）
 
 ---
 
 ## ファイル構成
 
-*   PPx_kuro_unicode_x64.CFG（カスタマイズファイル本体）
-*   PPx_color_xxxx.CFG（色設定ファイル（着せ替え用））
-*   font_example_XXX.cfg (フォント設定例)
-*   keyhelp.txt（[F1]キーで表示されるキー操作一覧）
-*   key 検討用\ppxkey.xlsx（キー操作検討・エイリアス登録している実行ファイル詳細）
+- PPx_kuro_unicode_x64.CFG（カスタマイズファイル本体）
+- PPx_color_xxxx.CFG（色設定ファイル（着せ替え用））
+- font_example_XXX.cfg (フォント設定例)
+- keyhelp.txt（[F1]キーで表示されるキー操作一覧）
+- key 検討用\ppxkey.xlsx（キー操作検討・エイリアス登録している実行ファイル詳細）
 
 ---
 
@@ -41,101 +41,101 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 添付ファイル一式のうち、`PPx_kuro_unicode_x64.CFG` とその階層にあるファイル、およびサブフォルダーの内容を PPx のインストールフォルダーにコピーしてください。
 `PPx_kuro_unicode_x64.CFG` と同じフォルダーに、`PPCW.exe` や `PPLIB64W.DLL` を含む PPx プログラム一式、およびその他の関連ファイルをコピーしてください。
 
-`PPx_kuro_unicode_x64.CFG` の内容をカスタマイザ（`PPCUSTW.exe`）で読み込みます。「(フォルダ：XXX)」と記載がある場合は、そのサブフォルダーを作成し、該当ファイルを格納してください。
+`PPx_kuro_unicode_x64.CFG` の内容をカスタマイザ（`PPCUSTW.exe`）で読み込みます。「（フォルダ：XXX）」と記載がある場合は、そのサブフォルダーを作成し、該当ファイルを格納してください。
 
 **A）PPx 拡張モジュール**
 
-*   Message Module （`PPxMES64.dll`）
-*   CFX Module （`PPxCFX64.dll`）
-*   Text Module （`PPxtext64.dll`）
-*   Everything Search Module（`PPXETP64.dll`）
-*   Module Junk Parts（`PPxjunk64.dll`）
-*   PPx CCX Module（`PPxccx64.dll`）
-*   PPx Script Module（`PPxscr64.dll`）
-*   PPx Window Module（`PPxwin64.dll`）
-*   PPx WS Module（`PPxws64.dll`）
-*   Common Dialog Extender（`PPDEX64.exe`/`PPDEX.exe`）
+- Message Module （`PPxMES64.dll`）
+- CFX Module （`PPxCFX64.dll`）
+- Text Module （`PPxtext64.dll`）
+- Everything Search Module（`PPXETP64.dll`）
+- Module Junk Parts（`PPxjunk64.dll`）
+- PPx CCX Module（`PPxccx64.dll`）
+- PPx Script Module（`PPxscr64.dll`）
+- PPx Window Module（`PPxwin64.dll`）
+- PPx WS Module（`PPxws64.dll`）
+- Common Dialog Extender（`PPDEX64.exe`/`PPDEX.exe`）
 
 **B）外部モジュール**
 
-*   `bregonig.dll`
-*   `migemo.dll`
+- `bregonig.dll`
+- `migemo.dll`
 
 **C）圧縮解凍ソフト**
 
-*   `7z.dll`
-*   `7z.exe`
-*   `7-zip64.dll`
-*   `RAR.exe` (フォルダ：`tools`)
-*   `UNRAR64.DLL`
-*   `UNRAR64J.DLL`
-*   `UNZZIP64.dll`
-*   `UNLHA32.dll`
-*   `CAB32.dll`
-*   `TAR64.dll`
-*   `UNBYPASS.dll`
-*   `unbypass.exe`
+- `7z.dll`
+- `7z.exe`
+- `7-zip64.dll`
+- `RAR.exe` （フォルダ：`tools`）
+- `UNRAR64.DLL`
+- `UNRAR64J.DLL`
+- `UNZZIP64.dll`
+- `UNLHA32.dll`
+- `CAB32.dll`
+- `TAR64.dll`
+- `UNBYPASS.dll`
+- `unbypass.exe`
 
 **D）64bit Susie プラグイン**
 
-*   `iftwic.sph`
-*   `ifjpegt.sph`
-*   `iftpsd.sph`
-*   `ifttf.sph`
-*   `ifextend.sph`
-*   `ifavif.sph`
-*   `axtpsd.sph`
-*   `axttc.sph`
-*   `ifgif.sph`
-*   `iftgdip.sph`
-*   `iftwebp.sph`
-*   `axpdf.sph`/`pdfium.dll`
-*   `runsph.exe` (PDF のサムネイル表示で必要)
+- `iftwic.sph`
+- `ifjpegt.sph`
+- `iftpsd.sph`
+- `ifttf.sph`
+- `ifextend.sph`
+- `ifavif.sph`
+- `axtpsd.sph`
+- `axttc.sph`
+- `ifgif.sph`
+- `iftgdip.sph`
+- `iftwebp.sph`
+- `axpdf.sph`/`pdfium.dll`
+- `runsph.exe` (PDF のサムネイル表示で必要)
 
 **E）32bit Susie プラグイン（フォルダ：`SPI`）**
 
-*   `ifcrw_t.spi`（CANON CRW）
-*   `ifdxfft.spi`（DXF）
-*   `ifdwg.spi`（DWG）
-*   `runspi.exe`
+- `ifcrw_t.spi`（CANON CRW）
+- `ifdxfft.spi`（DXF）
+- `ifdwg.spi`（DWG）
+- `runspi.exe`
 
 **F）コマンドラインツール**
 
-*   `xdoc2txt`
-    [V]キーで `%ME_pager` の設定に従ってバイナリドキュメントファイルに含まれるテキストを `PPv[A]` で閲覧できます。
-*   `zoxide.exe`（フォルダ:`tools`）
-*   `es.exe`（フォルダ:`tools`）
-*   `exiftool`（フォルダ:`tools`）
-*   `busybox64u.exe`
-*   `rg.exe`（フォルダ:`tools`）
-*   `fcp.exe`（フォルダ:`tools`）
-*   `ls2lf.exe`（フォルダ:`auxcmd`）
+- `xdoc2txt`
+  [V]キーで `%ME_pager` の設定に従ってバイナリドキュメントファイルに含まれるテキストを `PPv[A]` で閲覧できます。
+- `zoxide.exe`（フォルダ:`tools`）
+- `es.exe`（フォルダ:`tools`）
+- `exiftool`（フォルダ:`tools`）
+- `busybox64u.exe`
+- `rg.exe`（フォルダ:`tools`）
+- `fcp.exe`（フォルダ:`tools`）
+- `ls2lf.exe`（フォルダ:`auxcmd`）
 
 **G）フォント**
 
 **メインウィンドウ**
 
-*   Plemol JP ConsoleNFJ-medium (https://github.com/yuru7/PlemolJP)
-*   UDEV Gothic (https://github.com/yuru7/udev-gothic)
-*   ばぐまるゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
+- Plemol JP ConsoleNFJ-medium (https://github.com/yuru7/PlemolJP)
+- UDEV Gothic (https://github.com/yuru7/udev-gothic)
+- ばぐまるゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
 
 ※個人的には、少し太めのゼロ斜め線入りが好みです。
 
 **一行編集・ダイアログ**
 
-*   Migu 1c (https://github.com/yuru7/udev-gothic)
-*   プログラミング用フォント Utatane (https://github.com/nv-h/Utatane)
-*   ばぐまる P ゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
+- Migu 1c (https://github.com/yuru7/udev-gothic)
+- プログラミング用フォント Utatane (https://github.com/nv-h/Utatane)
+- ばぐまる P ゴシック (https://debugx.net/BugSoft.aspx?Soft=BugMaruGothic)
 
 **H）スクリプト**
 
 必須ではないがあれば便利なもの
 
-*   `check_installed_module.js`（必要なファイルがインストールされているかチェック）
-*   `get_newest_filename.js`（カレントディレクトリのファイルの中で、最後に更新されたもの、または最後にアクセスされたものの名前を返す）
-*   `ocr_vision_api.py`（Google Vision OCR を Python から使う）
-*   `ocr_vision_api_batch.bat`（`ocr_vision_ocr.py` を少しだけ使いやすくするための bat ファイル）
-*   `create_index.js`（Google Vision OCR で OCR 処理したファイルから `00_index.txt` を生成）
+- `check_installed_module.js`（必要なファイルがインストールされているかチェック）
+- `get_newest_filename.js`（カレントディレクトリのファイルの中で、最後に更新されたもの、または最後にアクセスされたものの名前を返す）
+- `ocr_vision_api.py`（Google Vision OCR を Python から使う）
+- `ocr_vision_api_batch.bat`（`ocr_vision_ocr.py` を少しだけ使いやすくするための bat ファイル）
+- `create_index.js`（Google Vision OCR で OCR 処理したファイルから `00_index.txt` を生成）
 
 ---
 
@@ -176,8 +176,8 @@ Everything Search Module の検索結果をリストアップしない代わり�
 
 **設定手順：**
 
-1. メニュー「設定（&O）」→「Everything を最小化してバックグラウンドで特権実行」を選び、サービス登録ダイアログが出たら「OK」を押します。
-2.  もう一度同じメニューでサービスが登録されているか確認します。
+1. メニュー「設定(&O)」→「Everything を最小化してバックグラウンドで特権実行」を選び、サービス登録ダイアログが出たら「OK」を押します。
+2. もう一度同じメニューでサービスが登録されているか確認します。
    正しく設定されていれば確認画面が表示されます。
    ![1716628595438](image/PPx_cust_Readme/1716628595438.png)
 3. Everything の ETP サーバ側も設定が必要です。図の通り設定してください（パスワード初期値は「password」）。
@@ -220,26 +220,25 @@ PDF をプレビューしたい場合は `ifextend.sph` の拡張子に PDF を�
 
 **`KC_main` の `FIRSTEVENT` では、以下の初期化処理を行います。**
 
-*   PPx 拡張モジュールのインストールチェック（`script\check_installed_module.js` を利用）
-*   `X_save` フォルダーの自動設定
-    *   `C:\Program Files\PPx` の場合 → `X_save = %APPDATA%\TOROID\PPx\userdata`
-    *   それ以外の場合 → `X_save = （PPx インストールフォルダー）\userdata`
-*   `X_save` フォルダー内に `listfile` フォルダーがなければ自動作成
-*   エントリの並び順を「名前数値順」に設定
-*   起動時ファイルマスクのリセット
-*   連動ビュー（`PPv[X]`）を必ず OFF に設定
-*   タブ付きウィンドウ起動時のエントリ表示設定
-*   タブ付きウィンドウ起動時、記憶したディレクトリがあれば自動でジャンプ
-*   `zoxide.exe` が存在する場合、zoxide の `db.zo` を `l_dirZoxide.txt` に自動変換
-*   `PPc[W]` 起動時、コメント表示用のビュー設定
+- `X_save` フォルダーの自動設定
+  - `C:\Program Files\PPx` の場合 → `X_save = %APPDATA%\TOROID\PPx\userdata`
+  - それ以外の場合 → `X_save = （PPx インストールフォルダー）\userdata`
+- `X_save` フォルダー内に `listfile` フォルダーがなければ自動作成
+- エントリの並び順を「名前数値順」に設定
+- 起動時ファイルマスクのリセット
+- 連動ビュー（`PPv[X]`）を必ず OFF に設定
+- タブ付きウィンドウ起動時のエントリ表示設定
+- タブ付きウィンドウ起動時、記憶したディレクトリがあれば自動でジャンプ
+- `zoxide.exe` が存在する場合、zoxide の `db.zo` を `l_dirZoxide.txt` に自動変換
+- `PPc[W]` 起動時、コメント表示用のビュー設定
 
-**`KC_main` の `ACTIVEEVENT` では、以下の処理を行います。**
+**`KC_main` の `ACTIVEEVENT` では、以下の処理を行います。主に一行編集をカスタマイズした後の設定初期化に使っています。**
 
-*   `XC_rmsk` のデフォルト値を設定（GUI で設定してもこの設定で上書きされます）
-*   REF ボタンの設定（条件により `K_lied:REFBUTTON` に `*refsel` を設定）
-*   `PPc[X]` 起動後に他の PPc がアクティブになった場合、コマンドを無効化しメッセージを表示
-    *   サブ窓でのコピー・移動にはPPx Message Moduleが必須ですが、何らかの理由で動作しない場合に備え、`PPx_kuro_unicode.cfg` のコメントアウト部分を解除すると有効になる代替手段を用意しています。この設定は、その代替手段を有効にした際に使用されます。
-*   `Edit_OptionCmd` および `Edit_OptionTitle` の初期化
+- `XC_rmsk` のデフォルト値を設定（GUI で設定してもこの設定で上書きされます）
+- REF ボタンの設定（条件により `K_lied:REFBUTTON` に `*refsel` を設定）
+- `PPc[X]` 起動後に他の PPc がアクティブになった場合、コマンドを無効化しメッセージを表示
+  - サブ窓でのコピー・移動には PPx Message Module が必須ですが、何らかの理由で動作しない場合に備え、`PPx_kuro_unicode.cfg` のコメントアウト部分を解除すると有効になる代替手段を用意しています。この設定は、その代替手段を有効にした際に使用されます。
+- `Edit_OptionCmd` および `Edit_OptionTitle` の初期化
 
 これらの設定は `KC_main` の `FIRSTEVENT` および `ACTIVEEVENT` に記述されており、PPx 起動時やアクティブ時に自動で実行されます。
 
