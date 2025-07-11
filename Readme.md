@@ -207,7 +207,7 @@ Everything Search Module の検索結果をリストアップしない代わり�
 
 **D）Susie プラグインの設定**
 
-PDF をプレビューしたい場合は `ifextend.sph` の拡張子に PDF を登録してください。
+PDF をサムネイルプレビューしたい場合は `ifextend.sph` の拡張子に PDF を登録してください。
 `axpdf.sph` は「使用する」のチェックを外してください（インストール自体は必要です）。
 
 **E）`PPXUMASK.TXT`・`PPXUPATH.TXT` の配置**
