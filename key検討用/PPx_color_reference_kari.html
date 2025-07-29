@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPx Final Color Reference</title>
+    <style>
+        body {
+            font-family: "Meiryo", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 1em;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            border-bottom: 3px solid #ccc;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 2em;
+            border-bottom: 2px solid rgba(0,0,0,0.2);
+        }
+        h2.gruvbox { background-color: #3c3836; color: #ebdbb2; }
+        h2.iceberg { background-color: #1e2132; color: #c6c8d1; }
+        h2.ajisai { background-color: #F5F5FA; color: #787882; border: 1px solid #ddd;}
+        h2.choco { background-color: #F5F2E2; color: #3C0000; border: 1px solid #ddd;}
+        h2.kuro { background-color: #1E1E1E; color: #EBCE57; }
+        h2.usuao { background-color: #E6FFFE; color: #000000; border: 1px solid #ddd;}
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #e9e9e9;
+        }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+        code {
+            background-color: #dcdcdc;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: "Consolas", "Courier New", monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .swatch-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .color-swatch {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #888;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PPx Color Reference(仮)</h1>
+
+    <h2 class="kuro">Kuro</h2>
+    <table>
+        <thead><tr><th>Setting</th><th>Value</th><th>Swatch</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>C_back</td><td><code>H1E1E1E</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#1E1E1E;"></div></div></td><td>背景、_AUTO可</td></tr>
+            <tr><td>C_mes</td><td><code>HEBCE57</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#57CEEB;"></div></div></td><td>標準の項目名の文字、_AUTO可</td></tr>
+            <tr><td>C_info</td><td><code>HF0FFFF</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFF0;"></div></div></td><td>ステータス行の文字、_AUTO可</td></tr>
+            <tr><td>C_res</td><td><code>H66CCFF,_AUTO</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFCC66;"></div></div></td><td>報告(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_line</td><td><code>H808040,H2F3FFF</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#408080;"></div><div class="color-swatch" style="background-color:#FF3F2F;"></div></div></td><td>境界線(通常,Gray)</td></tr>
+            <tr><td>CC_tree</td><td><code>HD4FF7F,H1E1E1E</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#7FFFD4;"></div><div class="color-swatch" style="background-color:#1E1E1E;"></div></div></td><td>ツリー(文字,背景)_AUTO可</td></tr>
+            <tr><td>CC_log</td><td><code>H5AEE5A,H1E1E1E</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#5AEE5A;"></div><div class="color-swatch" style="background-color:#1E1E1E;"></div></div></td><td>共用ログ、アドレスバー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_entry</td><td><code>HE6E6F0,H4B32C8,H66CCFF,H2F3FFF,HD4FF7F, H2F3FFF,_DWHI,H2FFFAD,HE5F4F4, HA0D8A0,H0C88F0,HFFFF80,_AUTO,_AUTO</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#F0E6E6;"></div><div class="color-swatch" style="background-color:#C8324B;"></div><div class="color-swatch" style="background-color:#FFCC66;"></div><div class="color-swatch" style="background-color:#FF3F2F;"></div><div class="color-swatch" style="background-color:#7FFFD4;"></div><div class="color-swatch" style="background-color:#FF3F2F;"></div><div class="color-swatch" style="background-color:#ADFF2F;"></div><div class="color-swatch" style="background-color:#F4F4E5;"></div><div class="color-swatch" style="background-color:#A0D8A0;"></div><div class="color-swatch" style="background-color:#F0880C;"></div><div class="color-swatch" style="background-color:#80FFFF;"></div></div></td><td>メッセージ,「.」,「..」,ラベル,ディレクトリ, システム,隠し,読出専用,通常,  圧縮,リンク,仮想化,暗号化,特殊 の順</td></tr>
+            <tr><td>C_eInfo</td><td><code>_AUTO,H2F3FFF,_AUTO,_DBLA,_DBLU,_DCYA, H675B4B,_WHI,_GRE,_WHI,_AUTO,_AUTO,_AUTO, H800040,H004000,H404000,H675B4B,H000040,H004080,H0039B0, _AUTO,H404040</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FF3F2F;"></div><div class="color-swatch" style="background-color:#4B5B67;"></div><div class="color-swatch" style="background-color:#400080;"></div><div class="color-swatch" style="background-color:#004000;"></div><div class="color-swatch" style="background-color:#004040;"></div><div class="color-swatch" style="background-color:#4B5B67;"></div><div class="color-swatch" style="background-color:#400000;"></div><div class="color-swatch" style="background-color:#804000;"></div><div class="color-swatch" style="background-color:#B03900;"></div><div class="color-swatch" style="background-color:#404040;"></div></div></td><td>メッセージ,削除,通常,不明,更新,追加, NoFocus,枠,下線,マーク,通常(偶数行),選択,区切線, ハイライト1～7, マウスカーソル下,非アクティブ</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="choco">Choco</h2>
+    <table>
+        <thead><tr><th>Setting</th><th>Value</th><th>Swatch</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>C_back</td><td><code>HE2F2F5</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#F5F2E2;"></div></div></td><td>背景、_AUTO可</td></tr>
+            <tr><td>C_mes</td><td><code>H00003C</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#3C0000;"></div></div></td><td>標準の項目名の文字、_AUTO可</td></tr>
+            <tr><td>C_info</td><td><code>H00001E</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#1E0000;"></div></div></td><td>ステータス行の文字、_AUTO可</td></tr>
+            <tr><td>C_res</td><td><code>H00003C,HAFCDE1</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#3C0000;"></div><div class="color-swatch" style="background-color:#E1DEAF;"></div></div></td><td>報告(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_line</td><td><code>H323250,_RED</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#503232;"></div></div></td><td>境界線(通常,Gray)</td></tr>
+            <tr><td>CC_tree</td><td><code>HECC0C0,H010327</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#C0C0EC;"></div><div class="color-swatch" style="background-color:#270301;"></div></div></td><td>ツリー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_tip</td><td><code>H00003C,HC8E6F5</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#3C0000;"></div><div class="color-swatch" style="background-color:#F5E6C8;"></div></div></td><td>チップ(文字,背景)_AUTO可</td></tr>
+            <tr><td>CC_log</td><td><code>H00003C,HAFCDE1</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#3C0000;"></div><div class="color-swatch" style="background-color:#E1DEAF;"></div></div></td><td>共用ログ、アドレスバー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_entry</td><td><code>_AUTO,_DMAG,H825A14,_DRED,H825A14, H3C3CB4,HB47800,H467300,H000014, _BLU,_RED,_DCYA,HB47800,_DMAG</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#145A82;"></div><div class="color-swatch" style="background-color:#145A82;"></div><div class="color-swatch" style="background-color:#B43C3C;"></div><div class="color-swatch" style="background-color:#0078B4;"></div><div class="color-swatch" style="background-color:#007346;"></div><div class="color-swatch" style="background-color:#140000;"></div><div class="color-swatch" style="background-color:#0078B4;"></div></div></td><td>メッセージ,「.」,「..」,ラベル,ディレクトリ, システム,隠し,読出専用,通常,  圧縮,リンク,仮想化,暗号化,特殊 の順</td></tr>
+            <tr><td>C_eInfo</td><td><code>_AUTO,H0000C0,_AUTO,_DWHI,_MGRE,_SBLU, HE0E0E0,_BLA,_DGRE,H825A14,_AUTO,_AUTO,_AUTO, HA3B5FC,H00FF80,_BRO,H4080FF,H80FF00,HFF80FF,H164BCB, H825A14,HAFCDE1</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#C00000;"></div><div class="color-swatch" style="background-color:#E0E0E0;"></div><div class="color-swatch" style="background-color:#145A82;"></div><div class="color-swatch" style="background-color:#FCB5A3;"></div><div class="color-swatch" style="background-color:#80FF00;"></div><div class="color-swatch" style="background-color:#FF8040;"></div><div class="color-swatch" style="background-color:#00FF80;"></div><div class="color-swatch" style="background-color:#FF80FF;"></div><div class="color-swatch" style="background-color:#CB4B16;"></div><div class="color-swatch" style="background-color:#145A82;"></div><div class="color-swatch" style="background-color:#E1DEAF;"></div></div></td><td>メッセージ,削除,通常,不明,更新,追加, NoFocus,枠,下線,マーク,通常(偶数行),選択,区切線, ハイライト1～7, マウスカーソル下,非アクティブ</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="usuao">Usuao</h2>
+    <table>
+        <thead><tr><th>Setting</th><th>Value</th><th>Swatch</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>C_back</td><td><code>HFFFFE6</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#E6FFFE;"></div></div></td><td>背景、_AUTO可</td></tr>
+            <tr><td>C_mes</td><td><code>_BLA</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div></div></td><td>標準の項目名の文字、_AUTO可</td></tr>
+            <tr><td>C_info</td><td><code>_BLA</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div></div></td><td>ステータス行の文字、_AUTO可</td></tr>
+            <tr><td>C_res</td><td><code>_BLA,HFF80FF</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div><div class="color-swatch" style="background-color:#FF80FF;"></div></div></td><td>報告(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_line</td><td><code>H934900,_RED</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#004993;"></div></div></td><td>境界線(通常,Gray)</td></tr>
+            <tr><td>CC_tree</td><td><code>H1E1E1E,HF0FFF0</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#1E1E1E;"></div><div class="color-swatch" style="background-color:#F0FFF0;"></div></div></td><td>ツリー(文字,背景)_AUTO可</td></tr>
+            <tr><td>CC_log</td><td><code>_BLA,_WHI</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div><div class="color-swatch" style="background-color:#FFFFFF;"></div></div></td><td>共用ログ、アドレスバー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_entry</td><td><code>HF0FFFF,H800040,HFF4000,H2F3FFF,HFF4000, _DMAG,HB47800,H2F3FFF,H1E1E1E, H825A14,HE6E6FA,_DCYA,_AUTO,_AUTO</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFF0;"></div><div class="color-swatch" style="background-color:#400080;"></div><div class="color-swatch" style="background-color:#0040FF;"></div><div class="color-swatch" style="background-color:#FF3F2F;"></div><div class="color-swatch" style="background-color:#0040FF;"></div><div class="color-swatch" style="background-color:#0078B4;"></div><div class="color-swatch" style="background-color:#FF3F2F;"></div><div class="color-swatch" style="background-color:#1E1E1E;"></div><div class="color-swatch" style="background-color:#145A82;"></div><div class="color-swatch" style="background-color:#FAE6E6;"></div></div></td><td>メッセージ,「.」,「..」,ラベル,ディレクトリ, システム,隠し,読出専用,通常,  圧縮,リンク,仮想化,暗号化,特殊 の順</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="ajisai">Ajisai</h2>
+    <table>
+        <thead><tr><th>Setting</th><th>Value</th><th>Swatch</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>C_back</td><td><code>HFAF5F5</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#F5F5FA;"></div></div></td><td>背景、_AUTO可</td></tr>
+            <tr><td>C_mes</td><td><code>H827878</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#787882;"></div></div></td><td>標準の項目名の文字、_AUTO可</td></tr>
+            <tr><td>C_info</td><td><code>_BLA</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div></div></td><td>ステータス行の文字、_AUTO可</td></tr>
+            <tr><td>C_res</td><td><code>_WHI,H9B5D00</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFFF;"></div><div class="color-swatch" style="background-color:#005D9B;"></div></div></td><td>報告(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_line</td><td><code>H504646,_RED</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#464650;"></div></div></td><td>境界線(通常,Gray)</td></tr>
+            <tr><td>CC_tree</td><td><code>_BLA,HD7CDCD</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div><div class="color-swatch" style="background-color:#DCD7CD;"></div></div></td><td>ツリー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_tip</td><td><code>_WHI,H9B5D00</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFFF;"></div><div class="color-swatch" style="background-color:#005D9B;"></div></div></td><td>チップ(文字,背景)_AUTO可</td></tr>
+            <tr><td>CC_log</td><td><code>H00003C,HD7CDCD</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#3C0000;"></div><div class="color-swatch" style="background-color:#DCD7CD;"></div></div></td><td>共用ログ、アドレスバー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_entry</td><td><code>_AUTO,H804000,H823C64,_DRED,H823C64, H3C3CB4,HB47800,H46A000,H000014, _BLU,_RED,_DCYA,HB47800,_DMAG</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#004080;"></div><div class="color-swatch" style="background-color:#643C82;"></div><div class="color-swatch" style="background-color:#643C82;"></div><div class="color-swatch" style="background-color:#B43C3C;"></div><div class="color-swatch" style="background-color:#0078B4;"></div><div class="color-swatch" style="background-color:#00A046;"></div><div class="color-swatch" style="background-color:#140000;"></div><div class="color-swatch" style="background-color:#0078B4;"></div></div></td><td>メッセージ,「.」,「..」,ラベル,ディレクトリ, システム,隠し,読出専用,通常,  圧縮,リンク,仮想化,暗号化,特殊 の順</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="gruvbox">Gruvbox Dark</h2>
+    <table>
+        <thead><tr><th>Setting</th><th>Value</th><th>Swatch</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>C_back</td><td><code>H282828</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#282828;"></div></div></td><td>背景、_AUTO可</td></tr>
+            <tr><td>C_mes</td><td><code>Hb2dbef</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#ebdbb2;"></div></div></td><td>標準の項目名の文字、_AUTO可</td></tr>
+            <tr><td>C_info</td><td><code>_BLA</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div></div></td><td>ステータス行の文字、_AUTO可</td></tr>
+            <tr><td>C_res</td><td><code>_WHI,H888545</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFFF;"></div><div class="color-swatch" style="background-color:#458588;"></div></div></td><td>報告(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_line</td><td><code>H36383c,H1d24cc</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#3c3836;"></div><div class="color-swatch" style="background-color:#cc241d;"></div></div></td><td>境界線(通常,Gray)</td></tr>
+            <tr><td>CC_tree</td><td><code>_BLA,H36383c</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div><div class="color-swatch" style="background-color:#3c3836;"></div></div></td><td>ツリー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_tip</td><td><code>_WHI,H888545</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFFF;"></div><div class="color-swatch" style="background-color:#458588;"></div></div></td><td>チップ(文字,背景)_AUTO可</td></tr>
+            <tr><td>CC_log</td><td><code>H7cc08e,H36383c</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#8ec07c;"></div><div class="color-swatch" style="background-color:#3c3836;"></div></div></td><td>共用ログ、アドレスバー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_entry</td><td><code>_AUTO,H1980fe,H98a583,_DRED,H98a583, H2199d7,H748392,H1d24cc,Hb2dbef, _BLU,_RED,_DCYA,H748392,_DMAG</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#fe8019;"></div><div class="color-swatch" style="background-color:#83a598;"></div><div class="color-swatch" style="background-color:#83a598;"></div><div class="color-swatch" style="background-color:#d79921;"></div><div class="color-swatch" style="background-color:#928374;"></div><div class="color-swatch" style="background-color:#cc241d;"></div><div class="color-swatch" style="background-color:#ebdbb2;"></div><div class="color-swatch" style="background-color:#928374;"></div></div></td><td>メッセージ,「.」,「..」,ラベル,ディレクトリ, システム,隠し,読出専用,通常,  圧縮,リンク,仮想化,暗号化,特殊 の順</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="iceberg">Iceberg Dark</h2>
+    <table>
+        <thead><tr><th>Setting</th><th>Value</th><th>Swatch</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>C_back</td><td><code>H32211e</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#1e2132;"></div></div></td><td>背景、_AUTO可</td></tr>
+            <tr><td>C_mes</td><td><code>Hd1c8c6</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#c6c8d1;"></div></div></td><td>標準の項目名の文字、_AUTO可</td></tr>
+            <tr><td>C_info</td><td><code>_BLA</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div></div></td><td>ステータス行の文字、_AUTO可</td></tr>
+            <tr><td>C_res</td><td><code>_WHI,H886433</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFFF;"></div><div class="color-swatch" style="background-color:#336488;"></div></div></td><td>報告(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_line</td><td><code>H2c312d,Hcb9466</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#2d312c;"></div><div class="color-swatch" style="background-color:#6694cb;"></div></div></td><td>境界線(通常,Gray)</td></tr>
+            <tr><td>CC_tree</td><td><code>_BLA,H211816</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#000000;"></div><div class="color-swatch" style="background-color:#161821;"></div></div></td><td>ツリー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_tip</td><td><code>_WHI,H886433</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#FFFFFF;"></div><div class="color-swatch" style="background-color:#336488;"></div></div></td><td>チップ(文字,背景)_AUTO可</td></tr>
+            <tr><td>CC_log</td><td><code>Hc2b889,H211816</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#89b8c2;"></div><div class="color-swatch" style="background-color:#161821;"></div></div></td><td>共用ログ、アドレスバー(文字,背景)_AUTO可</td></tr>
+            <tr><td>C_entry</td><td><code>_AUTO,H7053ff,Hc2b889,_DRED,Hc2b889, H92a5ff,H818985,H7053ff,Hd1c8c6, _BLU,_RED,_DCYA,H818985,_DMAG</code></td><td><div class="swatch-box"><div class="color-swatch" style="background-color:#ff5370;"></div><div class="color-swatch" style="background-color:#89b8c2;"></div><div class="color-swatch" style="background-color:#89b8c2;"></div><div class="color-swatch" style="background-color:#ffa592;"></div><div class="color-swatch" style="background-color:#858981;"></div><div class="color-swatch" style="background-color:#ff5370;"></div><div class="color-swatch" style="background-color:#c6c8d1;"></div><div class="color-swatch" style="background-color:#858981;"></div></div></td><td>メッセージ,「.」,「..」,ラベル,ディレクトリ, システム,隠し,読出専用,通常,  圧縮,リンク,仮想化,暗号化,特殊 の順</td></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
