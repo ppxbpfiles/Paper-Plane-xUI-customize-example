@@ -22,6 +22,7 @@ import io
 import os
 from google.cloud import vision
 import PyPDF2
+from google.cloud.vision_v1 import types  # 追加
 
 def detect_text_image(image_path, output_path):
     """画像ファイルからテキストを検出し、テキストファイルに保存"""
@@ -47,44 +48,39 @@ def detect_text_pdf(pdf_path, output_path):
     """PDFファイルからテキストを検出し、テキストファイルに保存"""
     client = vision.ImageAnnotatorClient()
 
-    # PDFファイルをバイナリで読み込む
     with io.open(pdf_path, 'rb') as f:
         content = f.read()
 
-    # Vision API用の入力設定
     input_config = vision.InputConfig(
         mime_type="application/pdf",
         content=content
     )
     feature = vision.Feature(type_=vision.Feature.Type.DOCUMENT_TEXT_DETECTION)
 
-    # PDFページ数を取得
     pdf_reader = PyPDF2.PdfReader(pdf_path)
     num_pages = len(pdf_reader.pages)
-
-    # 5ページごとにバッチ処理（ページ番号は0始まりに修正）
-    pages = [[i for i in range(j, min(j + 5, num_pages))] for j in range(0, num_pages, 5)]
+    # 1始まりでページ番号を作成
+    pages = [[i + 1 for i in range(j, min(j + 5, num_pages))] for j in range(0, num_pages, 5)]
 
     ocr_text = {}
     for batch in pages:
-        # batch_annotate_filesのリクエスト形式を修正
-        requests = [{
-            "input_config": input_config,
-            "features": [feature],
-            "pages": batch
-        }]
+        requests = [
+            vision.AnnotateFileRequest(
+                input_config=input_config,
+                features=[feature],
+                pages=batch
+            )
+        ]
         response = client.batch_annotate_files(requests=requests)
-        # エラーハンドリング追加
         if response.responses and response.responses[0].responses:
             for idx, image_response in enumerate(response.responses[0].responses):
-                page_no = batch[idx]
+                page_no = batch[idx]  # batchは1始まり
                 text = image_response.full_text_annotation.text if image_response.full_text_annotation.text else ""
-                ocr_text[f"Page_{page_no+1}"] = text  # 1始まりで保存
+                ocr_text[f"Page_{page_no}"] = text
         else:
             for idx, page_no in enumerate(batch):
-                ocr_text[f"Page_{page_no+1}"] = ""
+                ocr_text[f"Page_{page_no}"] = ""
 
-    # テキストをページ順に結合
     full_text = "\n".join(ocr_text[page] for page in sorted(ocr_text.keys(), key=lambda x: int(x.split('_')[1])))
 
     with open(output_path, 'w', encoding='utf-8') as output_file:
