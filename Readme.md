@@ -81,7 +81,7 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 - `iftpsd.sph`
 - `ifttf.sph`
 - `ifextend.sph`
-- `ifavif.sph`
+- `ifheif.sph`
 - `axtpsd.sph`
 - `axttc.sph`
 - `ifgif.sph`
