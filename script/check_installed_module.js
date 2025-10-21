@@ -60,7 +60,7 @@ var modules = [
   { file: "iftpsd.sph", name: "iftpsd.sph", path: "" },
   { file: "ifttf.sph", name: "ifttf.sph", path: "" },
   { file: "ifextend.sph", name: "ifextend.sph", path: "" },
-  { file: "ifavif.sph", name: "ifavif.sph", path: "" },
+  { file: "ifheif.sph", name: "ifheif.sph", path: "" },
   { file: "axtpsd.sph", name: "axtpsd.sph", path: "" },
   { file: "axttc.sph", name: "axttc.sph", path: "" },
   { file: "ifgif.sph", name: "ifgif.sph", path: "" },
