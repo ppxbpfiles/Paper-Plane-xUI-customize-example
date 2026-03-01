@@ -10,6 +10,41 @@ TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 
 ---
 
+## キーバインド一覧
+
+### アルファベットキー（A〜Z）
+
+| キー | 機能 |
+|---|---|
+| `[A]` | 属性変更（Attribute） |
+| `[B]` | バイナリ変換（Binary） |
+| `[C]` | エントリコピー（Copy） |
+| `[D]` | エントリ削除・ごみ箱へ（Delete） |
+| `[E]` | エディタで新規タブを開いて編集（Edit） |
+| `[F]` | ファイルマスク・一時設定（Find） |
+| `[G]` | Grep（Grep） |
+| `[H]` | アクセス履歴 / 入力履歴（History） |
+| `[I]` | ドライブ情報（drive Info） |
+| `[J]` | インクリメンタルサーチ（Jump） |
+| `[K]` | ディレクトリ作成（maKe directory） |
+| `[L]` | ドライブ変更（Logdisk） |
+| `[M]` | エントリ移動（Move） |
+| `[N]` | ネットワークドライブ / デバイスイジェクト（Network and eject） |
+| `[O]` | ファイル比較（cOmpare） |
+| `[P]` | 書庫に圧縮（Pack archive） |
+| `[Q]` | クイックアクセス（Quick Access） |
+| `[R]` | 名前変更（Rename） |
+| `[S]` | エントリのソート・一時設定（Sort file） |
+| `[T]` | ツリー一時表示・フォーカス移動（Tree view） |
+| `[U]` | 書庫解凍（Unpack archive） |
+| `[V]` | PPv[A]〜[W] で表示・複数起動可・バイナリ→テキスト表示（View file） |
+| `[W]` | ファイル検索（Wildcard search） |
+| `[X]` | コマンド実行（shell eXecute） |
+| `[Y]` | PPv[Y] で表示・ホイールで前 / 次ファイル |
+| `[Z]` | アプリケーションランチャ（Applauncher） |
+
+---
+
 ## このカスタマイズファイルの特長
 
 - タブなしの独立した 1 画面による軽快な動作
@@ -53,6 +88,7 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 - PPx Window Module（`PPxwin64.dll`）
 - PPx WS Module（`PPxws64.dll`）
 - Common Dialog Extender（`PPDEX64.exe`/`PPDEX.exe`）
+- PPx Tool Support Module（`ppxsup64.dll`）※Soyokaze でメニュー検索を使う場合
 
 **B）外部モジュール**
 
