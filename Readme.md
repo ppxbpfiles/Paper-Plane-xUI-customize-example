@@ -140,7 +140,7 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 ### カスタマイズファイルの読み込み方法
 
 1.  `PPx_kuro_unicode_x64.CFG` の内容をカスタマイザ（`PPCUSTW.exe`）で読み込みます。
-2.  PPxを一度終了してから再起動してください。
+2.  PPcを一度終了してから再起動してください。
 
 ---
 
@@ -161,7 +161,7 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 
 `zoxide.exe` を（PPx インストールフォルダー）`\tools` フォルダーに配置してください。
 
-デフォルト設定の場合、独立窓 `PPc[A]` 起動時に zoxide の db（`db.zo`）を PPx の補完候補用ファイル（`l_dirZoxide.txt`）に自動変換します。
+デフォルト設定の場合、独立窓 `PPc[A]` 起動時に zoxide の db（`db.zo`）を PPc の補完候補用ファイル（`l_dirZoxide.txt`）に自動変換します。
 
 #### zoxide の独自カスタマイズ
 
@@ -268,7 +268,7 @@ PDF をサムネイルプレビューしたい場合は `ifextend.sph` の拡張
   - サブ窓でのコピー・移動には PPx Message Module が必須ですが、何らかの理由で動作しない場合に備え、`PPx_kuro_unicode.cfg` のコメントアウト部分を解除すると有効になる代替手段を用意しています。この設定は、その代替手段を有効にした際に使用されます。
 - `Edit_OptionCmd` および `Edit_OptionTitle` の初期化
 
-これらの設定は `KC_main` の `FIRSTEVENT` および `ACTIVEEVENT` に記述されており、PPx 起動時やアクティブ時に自動で実行されます。
+これらの設定は `KC_main` の `FIRSTEVENT` および `ACTIVEEVENT` に記述されており、PPc 起動時やアクティブ時に自動で実行されます。
 
 ---
 
@@ -311,7 +311,7 @@ PDF をサムネイルプレビューしたい場合は `ifextend.sph` の拡張
 **補完リストの優先順位**
 
 ```
-entry（近隣ディレクトリ） → ^hist:d（パス入力履歴除外） → user（zoxide 等） → path
+entry（カレントディレクトリ内のディレクトリ） → ^hist:d（ディレクトリ） → user（zoxide 等） → path（パス補完候補ファイル(PPXUPATH.TXT)）
 ```
 
 **REF ボタン**
