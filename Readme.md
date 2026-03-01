@@ -17,15 +17,15 @@ TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 - サブ窓（参照窓）で処理先を指定するファイルコピー方式
 - zoxide によるパス補完
 - 事前に生成したディレクトリパスリストを使用したジャンプ（[Shift+G]）
-- Everything Search Engine を使用した検索（[W]メニューから選択）
-- あらかじめ生成した実行パスリストを使ってジャンプ（[Shift+X]）
+- [W]キーのメニューから Everything Search Engine を使用したファイル検索が可能
+- あらかじめ生成した実行パスリストを使ってアプリ起動（[Shift+Z]）またはファイルを開く（[Shift+X]）
 
 ---
 
 ## ファイル構成
 
 - PPx_kuro_unicode_x64.CFG（カスタマイズファイル本体）
-- PPx_color_xxxx.CFG（色設定ファイル（着せ替え用））
+- color-xxxx.CFG（色設定ファイル（着せ替え用））
 - font_example_XXX.cfg (フォント設定例)
 - keyhelp.txt（[F1]キーで表示されるキー操作一覧）
 - key 検討用\ppxkey.xlsx（キー操作検討・エイリアス登録している実行ファイル詳細）
@@ -99,14 +99,14 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 
 **F）コマンドラインツール**
 
-- `xdoc2txt`
+- `xdoc2txt.exe`（フォルダ：`tools`）
   [V]キーで `%ME_pager` の設定に従ってバイナリドキュメントファイルに含まれるテキストを `PPv[A]` で閲覧できます。
 - `zoxide.exe`（フォルダ:`tools`）
 - `es.exe`（フォルダ:`tools`）
-- `exiftool`（フォルダ:`tools`）
+- `exiftool.exe`（フォルダ:`tools`）
 - `busybox64u.exe`
 - `rg.exe`（フォルダ:`tools`）
-- `fcp.exe`（フォルダ:`tools`）
+- `fastcopy.exe`（フォルダ:`tools`）
 - `ls2lf.exe`（フォルダ:`auxcmd`）
 
 **G）フォント**
@@ -161,13 +161,13 @@ PPx のインストールフォルダーに、実行ファイルと関連ファ�
 
 `zoxide.exe` を（PPx インストールフォルダー）`\tools` フォルダーに配置してください。
 
-デフォルト設定の場合、独立窓 `PPc[A]` 起動時に zoxide の db（`db.zo`）を PPx の補完候補用ファイル（`l_dirzoxide.txt`）に自動変換します。
+デフォルト設定の場合、独立窓 `PPc[A]` 起動時に zoxide の db（`db.zo`）を PPx の補完候補用ファイル（`l_dirZoxide.txt`）に自動変換します。
 
 **C）Everything の設定**
 
 Everything Search Module をインストールすると、一行編集の補完リストにも Everything の検索結果が表示されますが、ファイル・ディレクトリの区別がなく使いにくいため、OFF（`ETP_PART=0`）にすることを推奨します。
 
-Everything Search Module の検索結果をリストアップしない代わりに、実行ファイル専用（`l_exeEverything.txt`）とディレクトリ専用（`l_dirEverything.txt`）の補完リストを Everything のコマンドライン版 `es.exe` で作成し、専用の一行編集窓から呼び出してジャンプできます（[Shift+Z]、[Shift+G]）。
+Everything Search Module の検索結果をリストアップしない代わりに、実行ファイル専用（`l_exeEverything.txt`）とディレクトリ専用（`l_dirEverything.txt`）の補完リストを Everything のコマンドライン版 `es.exe` で作成し、専用の一行編集窓から呼び出してジャンプ（[Shift+G]）またはアプリ起動（[Shift+Z]）できます。
 
 また、実行ファイルリストを使って [Shift+X] キーで任意のプログラムからファイルを開くこともできます。
 
