@@ -2,6 +2,15 @@
 setlocal
 REM Google Cloud Vision OCR バッチ起動用スクリプト
 REM 使い方: ocr_vision_api_batch.bat [入力ファイルパス]
+REM
+REM ▼ サービスアカウントJSONファイルのパスを必要に応じて設定
+REM set "CREDENTIALS=C:\path\to\your\credentials.json"
+REM
+REM 認証情報ファイルの存在確認（必要な場合のみ有効化）
+REM if not exist "%CREDENTIALS%" goto :missing_credentials
+REM
+REM 環境変数設定（必要な場合のみ有効化）
+REM set "GOOGLE_APPLICATION_CREDENTIALS=%CREDENTIALS%"
 
 set "INPUT_FILE=%~1"
 
@@ -48,6 +57,11 @@ exit /b 1
 :missing_python
 echo エラー: Python 実行ファイルが cmd.exe から見つかりません。
 echo        python.exe を PATH に通すか、PowerShell の Get-Command で見つかる状態にしてください。
+endlocal
+exit /b 1
+
+:missing_credentials
+echo エラー: 認証情報ファイル "%CREDENTIALS%" が見つかりません。
 endlocal
 exit /b 1
 
