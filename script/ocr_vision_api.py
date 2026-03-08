@@ -20,9 +20,35 @@
 import argparse
 import io
 import os
-from google.cloud import vision
-import PyPDF2
-from google.cloud.vision_v1 import types  # 追加
+
+try:
+    from google.cloud import vision
+except ImportError as exc:
+    raise SystemExit(
+        'google-cloud-vision がインストールされていません。'
+        ' `pip install google-cloud-vision` を実行してください。'
+    ) from exc
+
+try:
+    import PyPDF2
+except ImportError as exc:
+    raise SystemExit(
+        'PyPDF2 がインストールされていません。'
+        ' `pip install PyPDF2` を実行してください。'
+    ) from exc
+
+
+def validate_runtime():
+    """依存関係と認証情報を実行前に確認する"""
+    credentials = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS', '')
+    if not credentials:
+        raise EnvironmentError(
+            '環境変数 GOOGLE_APPLICATION_CREDENTIALS が設定されていません。'
+        )
+    if not os.path.exists(credentials):
+        raise FileNotFoundError(
+            f'認証情報ファイルが見つかりません: {credentials}'
+        )
 
 def detect_text_image(image_path, output_path):
     """画像ファイルからテキストを検出し、テキストファイルに保存"""
@@ -35,14 +61,14 @@ def detect_text_image(image_path, output_path):
     response = client.text_detection(image=image)
     
     if response.error.message:
-        raise Exception(f"Error: {response.error.message}")
+        raise Exception(f"OCR API エラー: {response.error.message}")
     
     text = response.text_annotations[0].description if response.text_annotations else ""
     
     with open(output_path, 'w', encoding='utf-8') as output_file:
         output_file.write(text)
     
-    print(f"Text extracted from {image_path} and saved to {output_path}")
+    print(f"OCRテキストを抽出し、{output_path} に保存しました: {image_path}")
 
 def detect_text_pdf(pdf_path, output_path):
     """PDFファイルからテキストを検出し、テキストファイルに保存"""
@@ -86,20 +112,22 @@ def detect_text_pdf(pdf_path, output_path):
     with open(output_path, 'w', encoding='utf-8') as output_file:
         output_file.write(full_text)
 
-    print(f"Text extracted from {pdf_path} and saved to {output_path}")
+    print(f"OCRテキストを抽出し、{output_path} に保存しました: {pdf_path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="OCR text from an image or PDF using Google Cloud Vision API")
-    parser.add_argument("-i", "--input", required=True, help="Path to input image or PDF file")
-    parser.add_argument("-o", "--output", required=True, help="Path to output text file")
+    parser = argparse.ArgumentParser(description="Google Cloud Vision API を使って画像またはPDFからOCRテキストを抽出します")
+    parser.add_argument("-i", "--input", required=True, help="入力する画像またはPDFファイルのパス")
+    parser.add_argument("-o", "--output", required=True, help="抽出したテキストの出力先ファイルパス")
     
     args = parser.parse_args()
     
     input_path = args.input
     output_path = args.output
-    
+
+    validate_runtime()
+
     if not os.path.exists(input_path):
-        raise FileNotFoundError(f"Input file {input_path} does not exist")
+        raise FileNotFoundError(f"入力ファイルが存在しません: {input_path}")
     
     # ファイル拡張子に基づいて処理を分岐
     file_extension = os.path.splitext(input_path)[1].lower()
@@ -109,7 +137,10 @@ def main():
     elif file_extension == ".pdf":
         detect_text_pdf(input_path, output_path)
     else:
-        raise ValueError(f"Unsupported file type: {file_extension}")
+        raise ValueError(
+            f"未対応のファイル形式です: {file_extension}"
+            " 対応形式は png, jpg, jpeg, gif, tif, tiff, bmp, pdf です。"
+        )
 
 if __name__ == "__main__":
     main()
