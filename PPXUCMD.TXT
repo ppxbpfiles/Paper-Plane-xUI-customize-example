@@ -1,100 +1,97 @@
-%M_addhistory ;** パス補完登録と削除 **
-%M_AdvancedCopy ;** 高機能なファイルコピー **
-%M_AdvancedMove ;** 高機能なファイル移動 **
-%M_backupsetting ;** 個人設定のバックアップ **
-%M_bin ;** バイナリ変換 **
-%M_Ccr ;** エントリ空欄右クリックメニュー **
-%M_DirMenu ;** エントリ表示空欄右クリックメニュー **
-%M_drives ;** comment **
-%M_edit ; 一行編集メニューバー
-%M_editc ; 一行編集コンテキストメニュー
-%M_editci ;** comment **
-%M_EmptyDirDelete ;** 空ディレクトリ一括削除 **
-%M_EverythingAdminExec ;** EverythingをUAC ダイアログを出さずに特権実行 **
-%M_exec ;** コマンドプロンプト **
-%M_filteredview ;** フィルタをかけてPPvで表示 **
-%M_gopath ;** Go Path関連 **
-%M_grep ;** 外部ツールによるGrep **
-%M_history ;** 履歴メニュー **
-%M_history1 ;** もっと前の履歴 **
-%M_historyd ;** DIR入力履歴メニュー **
-%M_historyt ;** このIDのPPc履歴メニュー **
-%M_insertstring ;** 文字列挿入 **
-%M_LaunchApp ;** アプリケーションランチャ(Zキー) **
-%M_launcharchiver ;** アーカイバ **
-%M_launchgraphic ;** 画像ビューアソフト **
-%M_launchmemo ;** アイデアメモ関連ソフト **
-%M_launchmmedia ;** マルチメディアソフト **
-%M_launchother ;** ランチャ(その他) **
-%M_launchphoto ;** 写真編集ソフト **
-%M_launchtext ;** ランチャ(テキスト) **
-%M_listfile ;** ListFileの作成と閲覧 **
-%M_mask ;** マスクメニュー(Ctrl+F) **
-%M_memdirectory ;** ID毎に記憶したディレクトリにジャンプ **
-%M_memo ;** 一行メモとリマインダー **
-%M_menuCDir ;** PPc ディレクトリメニュー **
-%M_menuCEdit ;** PPc 編集メニュー **
-%M_menuCEdit1 ;** エントリ名の取得 **
-%M_menuCFile ;** PPcファイルメニュー **
-%M_menuCHelp ;** PPcヘルプ **
-%M_menuCSetting ;** PPc 設定メニュー **
-%M_MenuCSystem ;** OSの機能を呼び出す **
-%M_menuCTool ;** PPc ツールメニュー **
-%M_menuCtool1 ;** 電源メニュー **
-%M_menuCView ;** PPc ビューメニュー **
-%M_menuCView1 ;** PPc VIEWサブメニュー **
-%M_menuCWindow ;** PPcウィンドウメニュー **
-%M_menuEEdit ;** 編集(E) **
-%M_menuEFile ;** ファイル(F) **
-%M_menuEHelp ;** ヘルプ(H) **
-%M_menuEView ;** 表示(I) **
-%M_menutree ;** ツリー(R) **
-%M_menuVEdit ;** 編集(E) **
-%M_menuVFile ;** ファイル(F) **
-%M_menuVGraphic ;** 画像(G) **
-%M_menuVHelp ;** ヘルプ(H) **
-%M_menuVSetting ;** PPv設定メニュー **
-%M_menuVTool ;** comment **
-%M_menuVView ;** 表示(V) **
-%M_networkandeject ;** ネットワークドライブ割り当てとデバイスイジェクト **
-%M_ocr ;** OCR関係 **
-%M_openlistfileupdir ;** ListFileの実体エントリを開く **
-%M_option_dir ;** 追加補完リストl_dirXXX.txtを使った一行編集のオプションメニュー **
-%M_option_exe ;** 追加補完リストl_exeXXXX.txtを使った一行編集のオプションメニュー **
-%M_option_help ;** ヘルプ切替 **
-%M_option_realesrgan ;** real-ESRGAN model name **
-%M_option_ripgrep ;** ripgrepで検索 **
-%M_pack7z ;** 圧縮サブメニュー(7z) **
-%M_packCAB ;** 圧縮サブメニュー(CAB) **
-%M_packLHA ;** 圧縮サブメニュー(LHA) **
-%M_packRAR ;** 圧縮サブメニュー(RAR) **
-%M_packtanarc ;** 個別圧縮書庫作成 **
-%M_packTAR ;** 圧縮サブメニュー(TAR) **
-%M_packZIP ;** 圧縮サブメニュー(ZIP) **
-%M_pathstore ;** Pathstore関連 **
-%M_Pdf ;** PdfcpuによるPDF編集 **
-%M_pjump ; ; [0] Path Jump
-%M_ppclistz ;** PPc[Zxx]用サブ窓起点リスト **
-%M_ppvc ; ; PPvコンテキスト(AIプロンプト)
-%M_Rename ;** まとめてリネーム **
-%M_search ;** 検索 **
-%M_selectppx1 ;** selectppx PPc新規窓起動メニュー付 **
-%M_shortcut ;** ショートカット作成メニュー **
-%M_tabc ; ; PPc タブメニュー&[-]
-%M_tabgroup ;** タブグループ(要X_combos2項目目B7=1) **
-%M_taskkill ;** 応答無しプロセスの終了 **
-%M_term2 ;** ターミナル起動メニュー **
-%M_term2admin ;** ターミナル起動メニュー(管理者権限) **
-%M_theme ;** 配色設定 **
-%M_timestampcopy ;** タイムスタンプ復元・複写 **
-%M_treelist01 ;** comment **
-%M_um01 ;** ディレクトリジャンプメニュー **
-%M_vmenu ;** PPv 最近開いたファイル **
-%M_webclip ;** Webクリップ/Webスクラップ **
-%M_wsrc ; ; PPc ^[W] 検索対象入力補助
-%M_XMPrating ;** レーティングをXMP情報に書き込む **
-%M_xpack ;** 圧縮関係メニュー(カレント) **
-
+%M_addhistory ; パス補完登録と削除
+%M_AdvancedCopy ; 高機能なファイルコピー
+%M_AdvancedMove ; 高機能なファイル移動
+%M_backupsetting ; 個人設定のバックアップ
+%M_bin ; バイナリ変換
+%M_Ccr ; エントリ空欄右クリックメニュー
+%M_Ccr.exe ; Ctrl+ENTER.exe
+%M_DirMenu ; エントリ表示空欄右クリックメニュー
+%M_drives ; ドライブ一覧
+%M_editci ; comment
+%M_EmptyDirDelete ; 空ディレクトリ一括削除
+%M_EverythingAdminExec ; EverythingをUAC ダイアログを出さずに特権実行
+%M_exec ; コマンドプロンプト
+%M_filteredview ; フィルタをかけてPPvで表示
+%M_gopath ; Go Path関連
+%M_grep ; 外部ツールによるGrep
+%M_history ; 履歴メニュー
+%M_history1 ; もっと前の履歴
+%M_historyd ; DIR入力履歴メニュー
+%M_historyt ; このIDのPPc履歴メニュー
+%M_insertstring ; 文字列挿入
+%M_ish ; ISHエンコード・デコード
+%M_launcharchiver ; アーカイバ
+%M_launchgraphic ; 画像ビューアソフト
+%M_launchmemo ; アイデアメモ関連ソフト
+%M_launchmmedia ; マルチメディアソフト
+%M_launchother ; ランチャ(その他)
+%M_launchphoto ; 写真編集ソフト
+%M_launchtext ; ランチャ(テキスト)
+%M_listfile ; ListFileの作成と閲覧
+%M_mask ; マスクメニュー(Ctrl+F)
+%M_memdirectory ; ID毎に記憶したディレクトリにジャンプ
+%M_memo ; 一行メモとリマインダー
+%M_menuCDir ; comment
+%M_menuCEdit ; comment
+%M_menuCEdit1 ; エントリ名の取得
+%M_menuCFile ; comment
+%M_menuCHelp ; comment
+%M_menuCRun ; comment
+%M_menuCSetting ; comment
+%M_MenuCSystem ; OSの機能を呼び出す
+%M_menuCTool ; comment
+%M_menuCtool1 ; 電源メニュー
+%M_menuCView ; comment
+%M_menuCView1 ; PPc VIEWサブメニュー
+%M_menuCWindow ; comment
+%M_menuEEdit ; 編集(E)
+%M_menuEFile ; ファイル(F)
+%M_menuEHelp ; ヘルプ(H)
+%M_menuEView ; 表示(I)
+%M_menutree ; ツリー(R)
+%M_menuVEdit ; 編集(E)
+%M_menuVFile ; ファイル(F)
+%M_menuVGraphic ; 画像(G)
+%M_menuVHelp ; ヘルプ(H)
+%M_menuVSetting ; PPv設定メニュー
+%M_menuVTool ; comment
+%M_menuVView ; 表示(V)
+%M_networkandeject ; ネットワークドライブ割り当てとデバイスイジェクト
+%M_ocr ; OCR関係
+%M_openlistfileupdir ; ListFileの実体エントリを開く
+%M_option_dir ; 追加補完リストl_dirXXX.txtを使った一行編集のオプションメニュー
+%M_option_exe ; 追加補完リストl_exeXXXX.txtを使った一行編集のオプションメニュー
+%M_option_help ; ヘルプ切替
+%M_option_realesrgan ; real-ESRGAN model name
+%M_option_ripgrep ; ripgrepで検索
+%M_pack7z ; 圧縮サブメニュー(7z)
+%M_packCAB ; 圧縮サブメニュー(CAB)
+%M_packLHA ; 圧縮サブメニュー(LHA)
+%M_packRAR ; 圧縮サブメニュー(RAR)
+%M_packtanarc ; 個別圧縮書庫作成
+%M_packTAR ; 圧縮サブメニュー(TAR)
+%M_packZIP ; 圧縮サブメニュー(ZIP)
+%M_pathstore ; Pathstore関連
+%M_Pdf ; PdfcpuによるPDF編集
+%M_ppclistz ; PPc[Zxx]用サブ窓起点リスト
+%M_Rename ; まとめてリネーム
+%M_search ; 検索
+%M_selectppx1 ; selectppx PPc新規窓起動メニュー付
+%M_shortcut ; ショートカット作成メニュー
+%M_taskkill ; 応答無しプロセスの終了
+%M_term2 ; ターミナル起動メニュー
+%M_term2admin ; ターミナル起動メニュー(管理者権限)
+%M_theme ; 配色設定
+%M_timestampcopy ; タイムスタンプ復元・複写
+%M_treelist01 ; comment
+%M_um01 ; ディレクトリジャンプメニュー
+%M_vmenu ; PPv 最近開いたファイル
+%M_webclip ; Webクリップ/Webスクラップ
+%M_workspace ; ワークスペース(要X_combos2項目目B7=1)
+%M_XMPrating ; レーティングをXMP情報に書き込む
+%M_xpack ; 圧縮関係メニュー(カレント)
+%MC_menu ; メニューバー
+%MC_sort ; ソートメニュー(s)
 *ai_chk ; AIファイル調査(Perplexity)
 *mp3 ; Everything(es.exe)でmp3ファイルをリストアップ
 *openwithie ; IEで開く

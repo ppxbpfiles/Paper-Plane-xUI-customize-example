@@ -88,7 +88,7 @@
 ;<[&]Merge files>;%k"'&'"
 ;<[?]Drop file on entry to running app>;%k"?"
 ;<[SHIFT+BackSpace]Open actual entry in ListFile>;%k"\BS"
-;<[SHIFT+Tab]Create new PPc window>;%k"\Tab"
+;<[SHIFT+Tab]New window with tab (*ppc -combo)>;%k"\Tab"
 ;<[SHIFT+Enter]Archive view(Arc)/Go to shortcut target(lnk)/Directory size(Dir)/Execute extension identification>;%k"\Enter"
 ;<[SHIFT+Pause]Show ALLTASKS control panel>;%k"\Pause"
 ;<[SHIFT+Esc]Close all windows except the active one>;%k"\Esc"

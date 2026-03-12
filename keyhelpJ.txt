@@ -88,7 +88,7 @@
 ;<[&]ファイルの結合>;%k"'&'"
 ;<[?]起動中のアプリにエントリ上のファイルをドロップ>;%k"?"
 ;<[SHIFT+BackSpace]ListFileの実体エントリを開く>;%k"\BS"
-;<[SHIFT+Tab]新規PPc窓作成>;%k"\Tab"
+;<[SHIFT+Tab]タブ付き新規窓(*ppc -combo)>;%k"\Tab"
 ;<[SHIFT+Enter]書庫ビュー(Arc)/ショートカット先へ(lnk)/ディレクトリサイズ(Dir)/拡張子判別実行>;%k"\Enter"
 ;<[SHIFT+Pause]ALLTASKSコントロールパネルを表示>;%k"\Pause"
 ;<[SHIFT+Esc]開いている窓以外を終了>;%k"\Esc"
