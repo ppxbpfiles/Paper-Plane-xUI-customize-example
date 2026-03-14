@@ -85,7 +85,8 @@ var modules = [
   { file: 'exiftool.exe', name: 'exiftool', path: 'tools\\' },
   { file: 'rg.exe', name: 'ripgrep', path: 'tools\\' },
   { file: 'fcp.exe', name: 'fastcopy cli', path: 'tools\\' },
-  { file: 'ls2lf.exe', name: 'ls2lf', path: 'auxcmd\\' }
+  { file: 'ls2lf.exe', name: 'ls2lf', path: 'auxcmd\\' },
+  { file: 'fzf.exe', name: 'fzf (Interactive Search)', path: 'tools\\' }
 ];
 
 // 未導入モジュールのメッセージを収集
