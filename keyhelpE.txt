@@ -1,4 +1,4 @@
-﻿;<[BackSpace]To parent directory>;%k"BS"
+;<[BackSpace]To parent directory>;%k"BS"
 ;<[Tab]Switch ID of PPc/PPv during startup>;%k"Tab"
 ;<[Enter]To subdirectory (Dir)/Execute Explorer compatible>;%k"Enter"
 ;<[Pause]Show system properties>;%k"Pause"
@@ -189,7 +189,7 @@
 ;<[Ctrl+F3]>;%k"^F3"
 ;<[Ctrl+F4]Close tab (only effective when *ppc -combo is started)>;%k"^F4"
 ;<[Ctrl+F5]Update directory>;%k"^F5"
-;<[Ctrl+F6]Search from all currently open windows/tabs>;%k"^F6"
+;<[Ctrl+F6]Window Config Adaptive - Global Search>;%k"^F6"
 ;<[Ctrl+F7]List PPc[A][B] entries>;%k"^F7"
 ;<[Ctrl+F8]Mask cursor and same day change>;%k"^F8"
 ;<[Ctrl+F9]Launch terminal as an administrator>;%k"^F9"
@@ -470,3 +470,4 @@
 ;<[Ctrl+Alt+Shift+F10]>;%k"^&\F10"
 ;<[Ctrl+Alt+Shift+F11]>;%k"^&\F11"
 ;<[Ctrl+Alt+Shift+F12]>;%k"^&\F12"
+
