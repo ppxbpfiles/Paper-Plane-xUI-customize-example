@@ -2,6 +2,8 @@
 
 TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 
+**PPx 入手先：** [TORO's Library](http://toro.d.dooo.jp/slppx.html) / [バイナリアーカイブ（GitHub）](https://github.com/toroidj/toroidj.github.io/tree/master/ppx)
+
 ---
 
 # スクリーンショット
