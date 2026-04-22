@@ -223,7 +223,7 @@
 ;<[Alt+I]View menu (I)>;%k"&I"
 ;<[Alt+J]>;%k"&J"
 ;<[Alt+K]>;%k"&k"
-;<[Alt+L]Path move>;%k"&L"
+;<[Alt+L]>;%k"&L"
 ;<[Alt+M]Move entry (Standard PPc Feature)>;%k"&M"
 ;<[Alt+N]>;%k"&N"
 ;<[Alt+O]Settings (O) menu>;%k"&O"
