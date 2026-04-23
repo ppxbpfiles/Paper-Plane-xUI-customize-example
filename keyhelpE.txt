@@ -273,7 +273,7 @@
 ;<[Ctrl+Shift+E](PPtray)Memo>;%k"^\E"
 ;<[Ctrl+Shift+F]>(PPtray)Activate PPc>;%k"^\F"
 ;<[Ctrl+Shift+G]Register entry path to completion list>;%k"^\G"
-;<[Ctrl+Shift+H]Open entry path in dialog (DialogHandler)>;%k"^\H"
+;<[Ctrl+Shift+H]>;%k"^\H"
 ;<[Ctrl+Shift+I]Linked info display>;%k"^\I"
 ;<[Ctrl+Shift+J]>;%k"^\J"
 ;<[Ctrl+Shift+K]>;%k"^\k"

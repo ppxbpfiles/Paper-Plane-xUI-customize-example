@@ -273,7 +273,7 @@
 ;<[Ctrl+Shift+E](PPtray)メモ>;%k"^\E"
 ;<[Ctrl+Shift+F]>(PPtray)PPcアクティブ化>;%k"^\F"
 ;<[Ctrl+Shift+G]エントリパスを補完リストに登録>;%k"^\G"
-;<[Ctrl+Shift+H]ダイアログでエントリのパスを開く(DialogHandler)>;%k"^\H"
+;<[Ctrl+Shift+H]>;%k"^\H"
 ;<[Ctrl+Shift+I]連動情報表示>;%k"^\I"
 ;<[Ctrl+Shift+J]>;%k"^\J"
 ;<[Ctrl+Shift+K]>;%k"^\k"
