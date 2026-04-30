@@ -181,7 +181,7 @@
 ;<[Ctrl+U]>;%k"^U"
 ;<[Ctrl+V]Paste file from clipboard>;%k"^V"
 ;<[Ctrl+W]Close tab (only effective when *ppc -combo is started)>;%k"^W"
-;<[Ctrl+X]Cut entry to clipboard>;%k"^X"
+;<[Ctrl+X]Cut entry to clipboard/Window management menu>;%k"^X"
 ;<[Ctrl+Y]Linked path/display path sync>;%k"^Y"
 ;<[Ctrl+Z]Minimize PPc window>;%k"^Z"
 ;<[Ctrl+F1]M_xxx format menu retrieved from config and executed (Simplified Ppxfazzy)>;%k"^F1"
