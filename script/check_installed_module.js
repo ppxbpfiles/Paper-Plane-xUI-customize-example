@@ -38,6 +38,7 @@ var modules = [
   { file: 'PPxtext64.dll', name: 'PPx Text Module', path: '' },
   { file: 'PPxwin64.dll', name: 'PPx Window Module', path: '' },
   { file: 'PPxws64.dll', name: 'PPx WS Module', path: '' },
+  { file: 'PPxkey64.dll', name: 'PPx key Module', path: '' },
   // 正規表現・migemo 関連
   { file: 'bregonig.dll', name: 'bregonig.dll', path: '' },
   { file: 'migemo.dll', name: 'migemo.dll', path: '' },
