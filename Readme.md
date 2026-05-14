@@ -457,7 +457,7 @@ entry（カレントディレクトリ内のディレクトリ） → ^hist:d（
 
 ### Emacs 風キーバインド（C-x プレフィックス）
 
-`[Ctrl+X]` はタブ・ペイン操作の**プレフィックスキー**として機能します。`[Ctrl+X]` を押すとヒント（`C-x [ m:Menu t:New r:Recent s:Select f:Find k:Kill l:Lock | o:Otherp 0:closep 1:closeotherp 2:Splitp | 4:detach 5:Dup ]`）がステータス行に表示され、続けて以下のキーを入力します。
+`[Ctrl+X]` はタブ・ペイン操作の**プレフィックスキー**として機能します。`[Ctrl+X]` を押すとヒント（`C-x [ m:Menu t:New r:Recent s:Select f:Find k:Kill l:Lock | o:Otherp 0:closep 1:closeotherp 2:Splitp | 4:detach 5:Dup ]`）がlinemessageに表示され、続けて以下のキーを入力します。
 
 > **補足：** `[Ctrl+X]` はエントリがマークされていないタブ窓（`PPc[Z??]`）上でのみ有効です。独立窓やマークありの場合は通常の `[Ctrl+X]`（カット）として動作します。
 
@@ -595,8 +595,8 @@ entry（カレントディレクトリ内のディレクトリ） → ^hist:d（
 
 用意されているテーマ：
 - 画面配色黒（`color-kuro.cfg`）
-- iceberg 風（`color-iceberg_taste.cfg`）
-- gruvbox 風（`color-gruvbox_taste.cfg`）
+- iceberg（`color-iceberg.cfg`）
+- gruvbox x claude warm dark（`color-gruvbox_claude.cfg`）
 - チョコ（`color-choco.cfg`）
 - 紫陽花（`color-ajisai.cfg`）
 - 薄青（`color-usuao.cfg`）
