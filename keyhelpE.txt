@@ -167,7 +167,7 @@
 ;<[Ctrl+G]>;%k"^G"
 ;<[Ctrl+H]>;%k"^H"
 ;<[Ctrl+I]Entry info>;%k"^I"
-;<[Ctrl+J]Interactive search in subdirectories (fzf)>;%k"^J"
+;<[Ctrl+J]Interactive search in subdirectories (fd)>;%k"^J"
 ;<[Ctrl+K]>;%k"^k"
 ;<[Ctrl+L]>;%k"^L"
 ;<[Ctrl+M]One-line memo>;%k"^M"
