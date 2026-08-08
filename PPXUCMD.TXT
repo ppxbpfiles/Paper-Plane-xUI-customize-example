@@ -1,3 +1,5 @@
+;<00_index.txtを検索>; %k"&t &t &t ESC" %:*where -type:2
+;<Exifのコメント検索>; %k"&t t t t right g down down down" %: *where
 %M ; 全メニュー一覧
 *ai_chk ; AIファイル調査(Perplexity)
 *mp3 ; Everything(es.exe)でmp3ファイルをリストアップ
