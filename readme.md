@@ -59,7 +59,7 @@ TORO 氏作のファイラー Paper Plane xUI のカスタマイズ例です。
 - [Ctrl+F6] 窓構成適応・全域検索（独立窓なら全窓、タブ窓ならグループ内を自動判別して検索）
 - Exiftool を使った撮影日時によるファイル名一括変換（→ [Exiftool によるファイル名一括変換](#exiftool-によるファイル名一括変換)）
 - PPx 内で完結する一行メモとリマインダー（→ [一行メモとリマインダー](#一行メモとリマインダー)）
-- aux: パス機能による Web ブックマーク（auxbookmark）および IMAP メール（auximap）の仮想フォルダ連携（→ [aux: パス連携ツール](#aux-パス連携ツールauximap--auxbookmark)）
+- aux: パス機能による Web ブックマーク（auxbookmark）および IMAP メール（auximap）の仮想フォルダ連携（→ [aux: パス連携ツール](#aux-パス連携ツールauxbookmark--auximap)）
 
 ---
 
