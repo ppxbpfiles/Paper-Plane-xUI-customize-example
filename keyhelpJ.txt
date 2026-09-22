@@ -213,7 +213,7 @@
 ;<[Alt+Ins]>;%k"&Ins"
 ;<[Alt+Del]>;%k"&Del"
 ;<[Alt+A]>;%k"&A"
-;<[Alt+B]>;%k"&B"
+;<[Alt+B]web bookmark search>;%k"&B"
 ;<[Alt+C]エントリコピー(PPc標準)>;%k"&C"
 ;<[Alt+D]ディレクトリメニュー(D)>;%k"&D"
 ;<[Alt+E]編集メニュー(E)>;%k"&E"

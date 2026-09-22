@@ -213,7 +213,7 @@
 ;<[Alt+Ins]>;%k"&Ins"
 ;<[Alt+Del]>;%k"&Del"
 ;<[Alt+A]>;%k"&A"
-;<[Alt+B]>;%k"&B"
+;<[Alt+B]web bookmark search>;%k"&B"
 ;<[Alt+C]Copy Entry (Standard PPc Feature)">;%k"&C"
 ;<[Alt+D]Directory menu (D)>;%k"&D"
 ;<[Alt+E]Edit menu (E)>;%k"&E"
