@@ -613,12 +613,14 @@ entry（カレントディレクトリ内のディレクトリ） → ^hist:d（
 メニューバーの「設定」→「画面配色と壁紙」から配色テーマを切り替えられます。
 
 用意されているテーマ：
-- 画面配色黒（`color-kuro.cfg`）
+- 黒（`color-kuro.cfg`）
+- FILMTN（`color-filmtn.cfg`）
 - iceberg（`color-iceberg.cfg`）
 - gruvbox x claude warm dark（`color-gruvbox_claude.cfg`）
+- 液晶（`color-ekisho.cfg`）
+- 薄青（`color-usuao.cfg`）
 - チョコ（`color-choco.cfg`）
 - 紫陽花（`color-ajisai.cfg`）
-- 薄青（`color-usuao.cfg`）
 - 画面配色デフォルト（PPx 標準の配色に戻す。`*ppcust -7` によるリセット）
 
 各テーマは `color-xxxx.CFG` ファイルとして提供されており、カスタマイザから直接読み込むことも可能です。
