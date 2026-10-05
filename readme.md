@@ -158,8 +158,8 @@ PPx のインストールフォルダに、実行ファイルと関連ファイ�
 - `fastcopy.exe`（フォルダ:`tools`）
 - `fd.exe`（フォルダ：`tools`）—— サブディレクトリのインタラクティブ検索で使用(Ctrl+J)
 - `ls2lf.exe`（フォルダ:`auxcmd`）
-- `auximap.exe`（フォルダ：`auxcmd`）—— IMAP メールの aux: 連携ツール
-- `auxbookmark.exe`（フォルダ：`auxcmd`）—— Web ブックマーク・閲覧履歴の aux: 連携ツール
+- `auximap.exe`（フォルダ：`auxcmd`）—— IMAP メールの aux: 連携ツール（[GitHub](https://github.com/ppxbpfiles/auximap)）
+- `auxbookmark.exe`（フォルダ：`auxcmd`）—— Web ブックマーク・閲覧履歴の aux: 連携ツール（[GitHub](https://github.com/ppxbpfiles/auxbookmark)）
 
 **G）フォント**
 
@@ -619,6 +619,7 @@ entry（カレントディレクトリ内のディレクトリ） → ^hist:d（
 - gruvbox x claude warm dark（`color-gruvbox_claude.cfg`）
 - 液晶（`color-ekisho.cfg`）
 - 薄青（`color-usuao.cfg`）
+- 初音ミク（`color-hatsunemiku.cfg`）
 - チョコ（`color-choco.cfg`）
 - 紫陽花（`color-ajisai.cfg`）
 - 画面配色デフォルト（PPx 標準の配色に戻す。`*ppcust -7` によるリセット）
@@ -1016,6 +1017,7 @@ PPx の `aux:` パス機能を利用して、Web ブックマークや IMAP メ�
 PPc 上に表示される `.url` や `.eml` は、ローカルディスク上に保存された実体ファイルではなく、PPx の ListFile 形式による仮想エントリです。Enter での起動や、反対画面へのコピー（`C`）操作を行った時点でオンデマンドに実体化されます。
 
 #### ① auxbookmark（Web ブックマーク・閲覧履歴連携）
+- **リポジトリ**: [GitHub: ppxbpfiles/auxbookmark](https://github.com/ppxbpfiles/auxbookmark)
 - **配置先**: `auxcmd\auxbookmark.exe`（設定ファイル: `auxcmd\auxbookmark.ini`）
 - **アクセスパス**: `aux://S_auxbookmark/`
 - **機能**:
@@ -1026,6 +1028,7 @@ PPc 上に表示される `.url` や `.eml` は、ローカルディスク上に
   - コマンドラインから URL の並行リンク切れチェック（`check`）や Netscape Bookmark HTML 形式への書き出し（`export`）が可能。
 
 #### ② auximap（IMAP メール連携）
+- **リポジトリ**: [GitHub: ppxbpfiles/auximap](https://github.com/ppxbpfiles/auximap)
 - **配置先**: `auxcmd\auximap.exe`（設定ファイル: `auxcmd\auximap.ini`）
 - **アクセスパス**: `aux://S_auximap/`
 - **機能**:
